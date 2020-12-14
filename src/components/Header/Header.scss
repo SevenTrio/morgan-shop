@@ -1,0 +1,43 @@
+@import "../../scss/config";
+
+.Header {
+  width: 100%;
+  height: 65px;
+  border-bottom: 1px solid $gray;
+  background-color: $white;
+
+  &-Container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 0 $fields;
+  }
+
+  &-ActionsContainer {
+    display: flex;
+    margin-left: auto;
+  }
+
+  &-Action {
+    &:not(:first-child) {
+      margin-left: 16px;
+    }
+
+    .IconButton {
+      border-radius: 0;
+
+      &:hover {
+        background-color: transparent;
+      }
+
+      .IconButton-Icon {
+        path {
+          stroke: $black;
+        }
+      }
+    }
+  }
+}

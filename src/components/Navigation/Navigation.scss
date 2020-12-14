@@ -1,0 +1,56 @@
+@import "../../scss/config";
+
+.Navigation {
+  margin-left: 32px;
+
+  &-List {
+    display: flex;
+  }
+
+  &-ListItem {
+    display: flex;
+    flex: 1 0 130px;
+    height: 64px;
+  }
+
+  &-Link {
+    display: flex;
+    flex: 1 0 auto;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100%;
+    padding: 22px 16px;
+    text-decoration: none;
+    color: $text-color;
+
+    //transition: color 0.15s linear;
+    //&:hover {
+    //  color: $dark-gray;
+    //}
+
+    transition: background-color 0.15s linear;
+    &:hover {
+      background-color: $light-gray;
+    }
+
+    &_active {
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        z-index: 1000;
+        background-color: $black;
+      }
+
+      &:hover {
+        cursor: inherit;
+        color: inherit;
+        background-color: inherit;
+      }
+    }
+  }
+}

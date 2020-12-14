@@ -1,0 +1,19 @@
+@import "../../scss/config";
+
+.IconButton {
+  display: flex;
+  padding: 16px;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $light-gray;
+  }
+
+  &-Icon {
+    height: 22px;
+    width: auto;
+  }
+}

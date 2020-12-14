@@ -1,0 +1,80 @@
+@import "../../scss/config";
+
+.BasketAction {
+  position: relative;
+
+  .IconButton {
+    &:after {
+      content: attr(data-basket-qty);
+      align-self: flex-end;
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
+
+  &-Preview {
+    position: absolute;
+    top: 54px;
+    right: 0;
+    z-index: 1000;
+    padding-top: 22px;
+  }
+
+  &-PreviewContent {
+    display: flex;
+    flex-direction: column;
+    min-height: 254px;
+    width: 272px;
+    padding: 12px;
+    background-color: $white;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.08);
+  }
+
+  &-Product {
+    display: flex;
+    margin-bottom: 16px;
+
+    &Image {
+      height: 76px;
+      width: 68px;
+    }
+
+    &Props {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-left: 16px;
+      border-bottom: 1px solid $gray;
+    }
+
+    &Name {
+      font-size: 12px;
+      line-height: 22px;
+    }
+
+    &Price {
+      margin-top: auto;
+      margin-bottom: 6px;
+    }
+
+    &Qty {
+      font-weight: 500;
+      color: $dark-gray;
+    }
+
+    &СalcPrice {
+      font-weight: 500;
+    }
+  }
+  
+  &-Button {
+    &.Button {
+      width: 100%;
+      margin-top: auto;
+
+      .Button-Text {
+        text-transform: uppercase;
+      }
+    }
+  }
+}

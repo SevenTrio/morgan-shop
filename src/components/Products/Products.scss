@@ -1,0 +1,21 @@
+.Products {
+  display: flex;
+  flex-direction: column;
+  margin-top: 26px;
+
+  &-Sorting {
+    margin-bottom: 16px;
+  }
+
+  &-List {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  &-Button {
+    align-self: center;
+    margin-bottom: 24px;
+  }
+}

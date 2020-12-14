@@ -1,18 +1,21 @@
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
+import { useFetchShopData } from "../../customHooks/useFetchShopData";
 import Header from "../Header/Header";
 import Routes from "../Routes/Routes";
 import './App.scss'
 
 const App = () => {
-  return (
-      <Router>
-        <Header/>
-        <div className="App-Wrapper">
-          <Routes/>
-        </div>
-      </Router>
-  )
+    useFetchShopData()
+
+    return (
+        <Router>
+            <Header/>
+            <main className="App-Container">
+                <Routes/>
+            </main>
+        </Router>
+    )
 }
 
 export default App;

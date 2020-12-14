@@ -1,20 +1,35 @@
 // Colors
 
-$black: #000000;
+$black: #121212;
+$white: #FAFAFA;
+$light-gray: #F0F0F0;
+$gray: #DEDEDE;
+$dark-gray: #6D6D6D;
+$red: #D92222;
 
-$gray1: #C9C9C9;
-$gray2: #9FA2B4;
-$gray3: #8E8E8E;
+$accent: #121212;
+$accent_hover: #424242;
+$accent_pressed: #6D6D6D;
 
-$violet: #9374EB;
-$pink: #E69FD6;
-//$pastel: #efebe1;
-$pastel: #ebdabe;
-
-// Font
+// Fonts
 
 $fontsize: 14px; // Body Font Size
-$lineheight: 20px; // Body Line Height
-$textcolor: $black; // Text Color
-$system: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
-$roboto: 'Roboto', sans-serif; // Roboto Font Family
+$line-height: 21px; // Body Line Height
+$text-color: $black; // Text Color
+$poppins: 'Poppins', sans-serif; // Poppins Font Family
+$montserrat: 'Montserrat', sans-serif; // Montserrat Font Family
+
+// Break Points
+
+$break_lg: 1200px;
+$break_md: 900px;
+$break_sm: 600px;
+$break_xs: 320px;
+
+$fields: 32px;
+//$fields_lg: 32px;
+$fields_md: 16px;
+$fields_sm: 8px;
+//$fields_xs: 8px;
+
+$max-width: $break_lg;

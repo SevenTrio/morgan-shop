@@ -1,0 +1,29 @@
+@import "../../scss/config";
+
+.SwitchAddRemoveButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 18px;
+  width: 18px;
+  padding: 0;
+  border: 2px solid $black;
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out;
+
+  &_type_remove {
+    background-color: $black;
+
+    .SwitchAddRemoveButton-Text {
+      color: $white;
+    }
+  }
+
+  &-Text {
+    font-family: $poppins;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: $black;
+  }
+}

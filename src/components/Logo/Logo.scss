@@ -1,0 +1,12 @@
+.Logo {
+  display: flex;
+
+  &-Link {
+    padding: 14px;
+  }
+
+  &-Image {
+    height: 34px;
+    width: auto;
+  }
+}

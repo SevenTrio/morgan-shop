@@ -1,5 +1,14 @@
-.App {
-  &-ContentWrapper {
+@import "../../scss/config";
 
+.App {
+  &-Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 0 $fields;
   }
 }

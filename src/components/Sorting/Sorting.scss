@@ -1,0 +1,57 @@
+@import "../../scss/config";
+
+.Sorting {
+  position: relative;
+
+  &-Button {
+    position: relative;
+    display: inline-flex;
+    border: none;
+    padding: 0 22px 0 12px;
+    background-color: transparent;
+  }
+
+  &-ButtonText {
+    font-family: $poppins;
+    font-weight: 500;
+    color: $black;
+  }
+
+  &-ButtonIcon {
+    position: absolute;
+    right: 0;
+    height: 22px;
+    width: auto;
+  }
+
+  &-Dropdown {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 210px;
+    padding: 6px 0;
+    z-index: 1000;
+    background-color: $white;
+    box-shadow: 1px 1px 10px 0 rgba(#000000, 0.08);
+  }
+
+  &-Item {
+    position: relative;
+    padding: 8px 48px 4px 12px;
+    font-size: 12px;
+    line-height: 22px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $gray;
+    }
+  }
+
+  &-CheckedIcon {
+    position: absolute;
+    right: 12px;
+    height: 20px;
+    width: auto;
+  }
+
+}
