@@ -1,7 +1,7 @@
 import React from 'react';
 import SwitchAddRemoveButton from "../SwitchAddRemoveButton/SwitchAddRemoveButton";
 import { useDispatch, useSelector } from "react-redux";
-import { addToBasket, removeFromBasket } from "../../redux/actions/basketActions";
+import { addToBasket, removeAllCopiesFromBasket } from "../../redux/actions/basketActions";
 import { selectBasketProducts } from "../../redux/selectors/basketSelectors";
 import './ProductCard.scss'
 
@@ -10,10 +10,9 @@ const ProductCard = ({ product }) => {
     const basketProducts = useSelector(selectBasketProducts);
     const isProductInBasket = basketProducts.some(item => item.id === product.id);
 
-    // TODO: refactor on removeAllCopiesFromBasket
     const handleToggleButton = (product) => {
         isProductInBasket
-            ? dispatch(removeFromBasket(product))
+            ? dispatch(removeAllCopiesFromBasket(product))
             : dispatch(addToBasket(product))
     }
 

@@ -33,6 +33,10 @@
         background-color: transparent;
       }
 
+      &:active {
+        background-color: transparent;
+      }
+
       .IconButton-Icon {
         path {
           stroke: $black;

@@ -15,14 +15,15 @@
   &-Preview {
     position: absolute;
     top: 54px;
-    right: 0;
+    right: -8px;
     z-index: 1000;
-    padding-top: 22px;
+    padding: 22px 8px 8px 8px;
   }
 
   &-PreviewContent {
     display: flex;
     flex-direction: column;
+    align-items: center;
     min-height: 254px;
     width: 272px;
     padding: 12px;
@@ -30,9 +31,18 @@
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.08);
   }
 
+  &-Products {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
   &-Product {
     display: flex;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
 
     &Image {
       height: 76px;
@@ -62,7 +72,7 @@
       color: $dark-gray;
     }
 
-    &СalcPrice {
+    &PriceValue {
       font-weight: 500;
     }
   }
@@ -76,5 +86,15 @@
         text-transform: uppercase;
       }
     }
+  }
+
+  &-EmptyImage {
+    width: 80px;
+    height: auto;
+    margin: 16px 0;
+  }
+
+  &-EmptyText {
+    margin-bottom: 24px;
   }
 }

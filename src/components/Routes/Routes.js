@@ -1,9 +1,10 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { selectCategoriesList } from "../../redux/selectors/categoriesSelectors";
 import Categories from "../Categories/Categories";
 import Products from "../Products/Products";
-import {useSelector} from "react-redux";
-import {selectCategoriesList} from "../../redux/selectors/categoriesSelectors";
+import Basket from "../Basket/Basket";
 
 const Routes = () => {
     const categories = useSelector(selectCategoriesList);
@@ -36,6 +37,10 @@ const Routes = () => {
                     <Products category={category}/>
                 </Route>
             )}
+
+            <Route path="/basket" exact>
+                <Basket/>
+            </Route>
 
             <Route path="*">
                 <h1>Not Found</h1>

@@ -12,7 +12,6 @@ const Products = ({ category }) => {
     const [productsPresented, setProductsPresented] = useState(12);
 
     useEffect(() => {
-        console.log("Products useEffect fired");
         setProductsPresented(12);
     }, [category, sortType]);
 
@@ -37,7 +36,6 @@ const Products = ({ category }) => {
                     Show more
                 </Button>
             }
-
         </div>
     )
 }
