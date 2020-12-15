@@ -1,4 +1,5 @@
 import { CATEGORIES_ACTIONS } from "./actionsTypes";
+import { API_HOST, CATEGORIES_URL } from "../../config";
 
 const fetchCategoriesStart = {
     type: CATEGORIES_ACTIONS.FETCH_CATEGORIES_START
@@ -15,7 +16,7 @@ const fetchCategoriesError = {
 export const fetchCategories = () => (dispatch) => {
     dispatch(fetchCategoriesStart);
 
-    fetch("https://morgan-shop.herokuapp.com/categories")
+    fetch(API_HOST + CATEGORIES_URL)
         .then(res => res.json())
         .then(data => {
             const categories = data.categories;

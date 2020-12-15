@@ -2,12 +2,15 @@
 
 .ProductCard {
   position: relative;
+  display: flex;
+  flex-direction: column;
   padding-bottom: 16px;
   background-color: $light-gray;
 
   &-Image {
     width: 100%;
     height: auto;
+    margin-bottom: 16px;
   }
 
   &-Button {
@@ -17,9 +20,13 @@
     z-index: 10;
   }
 
+  &-Props {
+    margin-top: auto;
+  }
+
   &-Name {
     width: 100%;
-    margin-top: 16px;
+    margin-top: auto;
     padding: 0 16px;
   }
 

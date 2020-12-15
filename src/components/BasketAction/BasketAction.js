@@ -1,4 +1,5 @@
-import React, { Fragment, useState }  from 'react';
+import React, { useState }  from 'react';
+import { API_HOST } from "../../config";
 import { useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { selectBasketTotalQuantity } from "../../redux/selectors/basketSelectors";
@@ -48,7 +49,7 @@ const BasketAction = ({ className = "" }) => {
                             <div className="BasketAction-Products">
                                 {basket.products.map(product =>
                                     <div key={product.id} className="BasketAction-Product">
-                                        <img src={product.image} alt="" className="BasketAction-ProductImage"/>
+                                        <img src={API_HOST + product.image} alt="" className="BasketAction-ProductImage"/>
                                         <div className="BasketAction-ProductProps">
                                             <p className="BasketAction-ProductName">
                                                 {product.name}

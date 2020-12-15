@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import { API_HOST } from "../../config";
 import { useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { selectBasketEstimatePrice } from "../../redux/selectors/basketSelectors";
@@ -51,7 +52,7 @@ const Basket = () => {
                         <div className="Basket-Products">
                             {basket.products.map(product =>
                                 <div key={product.id} className="Basket-Product">
-                                    <img src={product.image} alt={product.name} className="Basket-ProductImage"/>
+                                    <img src={API_HOST + product.image} alt={product.name} className="Basket-ProductImage"/>
                                     <div className="Basket-ProductProps">
                                         <p className="Basket-ProductCategory">Table lamp</p>
                                         <p className="Basket-ProductName">{product.name}</p>

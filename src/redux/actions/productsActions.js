@@ -1,4 +1,5 @@
 import { PRODUCTS_ACTIONS } from "./actionsTypes";
+import { API_HOST, PRODUCTS_URL } from "../../config";
 
 const fetchProductsStart = {
     type: PRODUCTS_ACTIONS.FETCH_PRODUCTS_START
@@ -15,7 +16,7 @@ const fetchProductsError = {
 export const fetchProducts = () => (dispatch) => {
     dispatch(fetchProductsStart);
 
-    fetch("https://morgan-shop.herokuapp.com/products")
+    fetch(API_HOST + PRODUCTS_URL)
         .then(res => res.json())
         .then(data => {
             const products = data.products;

@@ -1,8 +1,9 @@
 import React from 'react';
-import SwitchAddRemoveButton from "../SwitchAddRemoveButton/SwitchAddRemoveButton";
+import { API_HOST } from "../../config";
 import { useDispatch, useSelector } from "react-redux";
 import { addToBasket, removeAllCopiesFromBasket } from "../../redux/actions/basketActions";
 import { selectBasketProducts } from "../../redux/selectors/basketSelectors";
+import SwitchAddRemoveButton from "../SwitchAddRemoveButton/SwitchAddRemoveButton";
 import './ProductCard.scss'
 
 const ProductCard = ({ product }) => {
@@ -18,14 +19,16 @@ const ProductCard = ({ product }) => {
 
     return (
         <div className="ProductCard">
-            <img src={product.image} alt={product.name} className="ProductCard-Image"/>
+            <img src={API_HOST + product.image} alt={product.name} className="ProductCard-Image"/>
             <SwitchAddRemoveButton
                 className="ProductCard-Button"
                 isRemove={isProductInBasket}
                 onClick={() => handleToggleButton(product)}
             />
-            <p className="ProductCard-Name">{product.name}</p>
-            <p className="ProductCard-Price">{"£" + product.price}</p>
+            <div className="ProductCard-Props">
+                <p className="ProductCard-Name">{product.name}</p>
+                <p className="ProductCard-Price">{"£" + product.price}</p>
+            </div>
         </div>
     )
 }
