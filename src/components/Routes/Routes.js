@@ -6,6 +6,7 @@ import Categories from "../Categories/Categories";
 import Products from "../Products/Products";
 import Basket from "../Basket/Basket";
 import Hidden from "../Hidden/Hidden";
+import Login from "../Login/Login";
 
 const Routes = () => {
     const categories = useSelector(selectCategoriesList);
@@ -21,7 +22,7 @@ const Routes = () => {
             </Route>
 
             <Route path="/login" exact>
-                <h1>Login</h1>
+                <Login/>
             </Route>
 
             <Route path="/registration" exact>

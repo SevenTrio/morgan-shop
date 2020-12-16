@@ -1,0 +1,113 @@
+@import "../../scss/config";
+
+.TextField {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 33px;
+
+  @media screen and (max-width: $break_sm - 1px){
+    margin-bottom: 20px;
+  }
+
+  &_error {
+    margin-bottom: 7px;
+
+    @media screen and (max-width: $break_sm - 1px){
+      margin-bottom: 4px;
+    }
+
+    .TextField-Input {
+      border: 1px solid $red;
+    }
+  }
+
+  &-Hints {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2px;
+  }
+
+  &-Label {
+    font-size: 14px;
+    line-height: 21px;
+
+    @media screen and (max-width: $break_sm - 1px){
+      font-size: 12px;
+      line-height: 22px;
+    }
+  }
+
+  &-ForgotPassword {
+    margin-left: auto;
+    font-size: 12px;
+    line-height: 18px;
+    text-decoration-line: underline;
+    color: $black;
+
+    @media screen and (max-width: $break_sm - 1px){
+      font-size: 10px;
+      line-height: 15px;
+    }
+  }
+
+  &-InputWrapper {
+    position: relative;
+  }
+
+  &-Input {
+    display: flex;
+    width: 100%;
+    padding: 10px 12px 9px 12px;
+    border: 1px solid $dark-gray;
+    font-family: $poppins;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+
+    @media screen and (max-width: $break_sm - 1px){
+      padding: 7px 8px;
+      font-size: 12px;
+      line-height: 22px;
+    }
+
+    &_password {
+      padding: 10px 46px 9px 12px;
+
+      @media screen and (max-width: $break_sm - 1px){
+        padding: 7px 46px 8px 7px;
+      }
+    }
+
+    &:focus {
+      border: 1px solid $black;
+    }
+
+    &::placeholder {
+      font-weight: 400;
+      color: $dark-gray;
+    }
+  }
+
+  &-Icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translate(-0, -50%);
+    height: 22px;
+    width: 22px;
+    cursor: pointer;
+  }
+
+  &-Error {
+    margin-top: 4px;
+    font-size: 12px;
+    line-height: 22px;
+    color: $red;
+
+    @media screen and (max-width: $break_sm - 1px) {
+      margin-top: 0;
+      font-size: 10px;
+      line-height: 16px;
+    }
+  }
+}
