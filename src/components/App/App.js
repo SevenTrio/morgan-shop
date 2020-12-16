@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import { useFetchShopData } from "../../customHooks/useFetchShopData";
 import Header from "../Header/Header";
+import Menu from "../Menu/Menu";
 import Routes from "../Routes/Routes";
 import './App.scss'
 
@@ -11,9 +12,10 @@ const App = () => {
     return (
         <Router>
             <Header/>
-            <main className="App-Container">
+            <Menu/>
+            <div className="App-Container">
                 <Routes/>
-            </main>
+            </div>
         </Router>
     )
 }

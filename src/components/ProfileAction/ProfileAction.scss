@@ -1,3 +1,27 @@
-.ProfileAction {
+@import "../../scss/config";
 
+.ProfileAction {
+  &-NavLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding: 21px;
+    text-decoration: none;
+    color: $black;
+
+    @media screen and (max-width: $break_sm - 1px){
+      padding: 13px;
+    }
+  }
+
+  &-Icon {
+    height: 22px;
+    width: auto;
+
+    path {
+      stroke: $black;
+    }
+  }
 }

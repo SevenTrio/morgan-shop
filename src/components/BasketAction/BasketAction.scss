@@ -3,12 +3,47 @@
 .BasketAction {
   position: relative;
 
-  .IconButton {
+  &-NavLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding: 21px;
+    text-decoration: none;
+    color: $black;
+
+    @media screen and (max-width: $break_sm - 1px){
+      padding: 13px;
+    }
+
     &:after {
       content: attr(data-basket-qty);
       align-self: flex-end;
       font-size: 12px;
       line-height: 20px;
+    }
+
+    &_active {
+      &:before {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        z-index: 1000;
+        background-color: $black;
+      }
+    }
+  }
+
+  &-Icon {
+    height: 22px;
+    width: auto;
+
+    path {
+      stroke: $black;
     }
   }
 

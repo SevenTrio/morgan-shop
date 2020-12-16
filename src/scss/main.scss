@@ -3,9 +3,9 @@
 @import "reset";
 @import "config";
 
-//html {
-//  margin-right: calc(-1 * (100vw - 100%));
-//}
+html {
+  margin-right: calc(-1 * (100vw - 100%));
+}
 
 body {
   overflow-x: hidden;

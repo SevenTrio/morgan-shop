@@ -1,0 +1,106 @@
+@import "../../scss/config";
+
+.Menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #F0F0F0;
+  z-index: 1000;
+
+  &-Header {
+    height: 64px;
+
+    @media screen and (max-width: $break_sm - 1px){
+      height: 48px;
+    }
+  }
+
+  &-Container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 0 $fields;
+
+    @media screen and (max-width: $break_md - 1px){
+      padding: 0 $fields-md;
+    }
+
+    @media screen and (max-width: $break_sm - 1px){
+      padding: 0 $fields-sm;
+    }
+  }
+
+  &-IconButton {
+    &.IconButton {
+      padding: 16px;
+
+      @media screen and (max-width: $break_sm - 1px){
+        padding: 12px;
+      }
+
+      .IconButton-Icon {
+        height: 22px;
+        width: auto;
+      }
+    }
+  }
+
+  &-SearchButton {
+    margin-left: auto;
+  }
+
+  &-Content {
+    padding: 16px 0;
+
+    .Menu-Container {
+      @media screen and (max-width: $break_sm - 1px){
+        padding: 0 16px;
+      }
+    }
+  }
+
+  &-Products {
+    width: 100%;
+  }
+
+  &-ProductsTitle {
+    margin-bottom: 6px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 22px;
+    color: $dark-gray;
+  }
+
+  &-Navigation {
+    &.Navigation {
+      .Navigation-List {
+        flex-direction: column;
+      }
+
+      .Navigation-ListItem {
+        height: auto;
+        flex: 0 1 auto;
+        border-bottom: 1px solid $gray;
+      }
+
+      .Navigation-Link {
+        justify-content: flex-start;
+        padding: 8px 0;
+        font-size: 12px;
+        line-height: 22px;
+
+        &_active {
+          &:after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

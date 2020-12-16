@@ -4,7 +4,7 @@ import { useSelector } from "react-redux" ;
 import { selectCategoriesSortedByMenuOrder } from "../../redux/selectors/categoriesSelectors";
 import './Navigation.scss';
 
-const Navigation = ({ className = "" }) => {
+const Navigation = ({ className = "", onNavLinkClick }) => {
     const categories = useSelector(selectCategoriesSortedByMenuOrder());
 
     return (
@@ -16,6 +16,7 @@ const Navigation = ({ className = "" }) => {
                             to={"/" + category.alias}
                             className="Navigation-Link"
                             activeClassName="Navigation-Link_active"
+                            onClick={onNavLinkClick}
                         >
                             {category.title}
                         </NavLink>

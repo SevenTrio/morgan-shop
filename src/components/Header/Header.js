@@ -24,8 +24,14 @@ const Header = () => {
                     <Hidden mdDown>
                         <SearchAction className="Header-Action Header-SearchAction"/>
                     </Hidden>
-                    <ProfileAction className="Header-Action Header-ProfileAction"/>
-                    <BasketAction className="Header-Action Header-BasketAction"/>
+                    <ProfileAction
+                        className="Header-Action Header-ProfileAction"
+                        activeClassName="Header-Action_active"
+                    />
+                    <BasketAction
+                        className="Header-Action Header-BasketAction"
+                        activeClassName="Header-Action_active"
+                    />
                 </div>
             </div>
         </header>

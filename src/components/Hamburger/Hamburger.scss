@@ -1,0 +1,18 @@
+@import "../../scss/config";
+
+.Hamburger {
+  &-Button {
+    &.IconButton {
+      padding: 16px;
+
+      @media screen and (max-width: $break_sm - 1px){
+        padding: 12px;
+      }
+
+      .IconButton-Icon {
+        height: 22px;
+        width: auto;
+      }
+    }
+  }
+}

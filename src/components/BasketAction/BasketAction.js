@@ -2,15 +2,17 @@ import React, { useState }  from 'react';
 import { API_HOST } from "../../config";
 import { useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { useBreakpoints } from "../../customHooks/useBreakpoints";
 import { selectBasketTotalQuantity } from "../../redux/selectors/basketSelectors";
 import { ReactComponent as BasketIcon } from './ic_shopping_card.svg';
-import IconButton from "../IconButton/IconButton";
+import { NavLink } from "react-router-dom";
 import Button from "../Button/Button";
 import lampImage from "./lamp.svg"
 import './BasketAction.scss';
 
-const BasketAction = ({ className = "" }) => {
+const BasketAction = ({ className = "", activeClassName="" }) => {
     let history = useHistory();
+    const { breakMdUp } = useBreakpoints();
     const basket = useSelector((state) => state.basket);
     const basketTotalQty = useSelector(selectBasketTotalQuantity);
     const [basketPreviewOpen, setBasketPreviewOpen] = useState(false);
@@ -34,14 +36,17 @@ const BasketAction = ({ className = "" }) => {
             onMouseEnter={handleBasketPreviewOpen}
             onMouseLeave={handleBasketPreviewClose}
         >
-            <IconButton
-                icon={BasketIcon}
-                className="BasketAction-Icon"
-                onClick={handleGoToBasket}
+            <NavLink
+                to="/basket"
+                className="BasketAction-NavLink"
+                activeClassName={activeClassName}
+                onClick={handleBasketPreviewClose}
                 data-basket-qty={basketTotalQty}
-            />
+            >
+                <BasketIcon className="BasketAction-Icon"/>
+            </NavLink>
 
-            {basketPreviewOpen &&
+            {basketPreviewOpen && breakMdUp &&
                 <div className="BasketAction-Preview">
                     {basket.products.length
                         ?

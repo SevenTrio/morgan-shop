@@ -3,6 +3,7 @@
 .Navigation {
   &-List {
     display: flex;
+    flex: 1 1 auto;
   }
 
   &-ListItem {
