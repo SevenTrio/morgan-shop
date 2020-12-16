@@ -3,9 +3,6 @@
 @import "reset";
 @import "config";
 
-html {
-  margin-right: calc(-1 * (100vw - 100%));
-}
 
 body {
   overflow-x: hidden;
@@ -15,6 +12,11 @@ body {
   line-height: $line-height;
   color: $text-color;
   background-color: $white;
+}
 
-
+// убираем прыжки от появления/скрытия полосы прокрутки в декстопной версии
+@media screen and (min-width: $break_md){
+  html {
+    margin-right: calc(-1 * (100vw - 100%));
+  }
 }

@@ -9,11 +9,13 @@ import {
     removeAllCopiesFromBasket,
     setBasketCheckedOut,
 } from "../../redux/actions/basketActions";
-import { ReactComponent as CloseIcon } from './ic_close.svg';
+import { Link } from "react-router-dom";
 import IconButton from "../IconButton/IconButton";
 import Button from "../Button/Button";
+import Hidden from "../Hidden/Hidden";
 import lampImage from './lamp.svg';
 import glowingLampImage from './glowing_lamp.svg';
+import { ReactComponent as CloseIcon } from './ic_close.svg';
 import './Basket.scss';
 
 
@@ -87,18 +89,22 @@ const Basket = () => {
 
                         <div className="Basket-Summary">
                             <div className="Basket-SummaryContainer">
-                                <p className="Basket-SummaryTitle">Order Summary</p>
+                                <Hidden smDown>
+                                    <p className="Basket-SummaryTitle">Order Summary</p>
+                                </Hidden>
                                 <ul className="Basket-SummaryList">
-                                    {basket.products.map(product =>
-                                        <li key={product.id} className="Basket-SummaryListItem">
-                                            <span className="Basket-SummaryProductName">
-                                                {product.name}
-                                            </span>
-                                            <span className="Basket-SummaryProductPrice">
-                                                {"£" + Number(product.price) * product.qty}
-                                            </span>
-                                        </li>
-                                    )}
+                                    <Hidden smDown>
+                                        {basket.products.map(product =>
+                                            <li key={product.id} className="Basket-SummaryListItem">
+                                                <span className="Basket-SummaryProductName">
+                                                    {product.name}
+                                                </span>
+                                                <span className="Basket-SummaryProductPrice">
+                                                    {"£" + Number(product.price) * product.qty}
+                                                </span>
+                                            </li>
+                                        )}
+                                    </Hidden>
                                     <li className="Basket-SummaryListItem">
                                         <span className="Basket-SummaryProductName">
                                             Express Delivery
@@ -119,6 +125,15 @@ const Basket = () => {
                                 >
                                     Checkout
                                 </Button>
+
+                                <Hidden mdUp>
+                                    <Link
+                                        to="/"
+                                        className="Basket-Link"
+                                    >
+                                        Continue shopping
+                                    </Link>
+                                </Hidden>
                             </div>
                         </div>
                     </div>
