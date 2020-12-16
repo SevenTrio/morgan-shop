@@ -3,6 +3,13 @@
 .Sorting {
   position: relative;
 
+  &-Text {
+    @media screen and (max-width: $break_sm - 1px){
+      font-size: 12px;
+      line-height: 22px;
+    }
+  }
+
   &-Button {
     position: relative;
     display: inline-flex;
@@ -15,6 +22,11 @@
     font-family: $poppins;
     font-weight: 500;
     color: $black;
+
+    @media screen and (max-width: $break_sm - 1px){
+      font-size: 12px;
+      line-height: 22px;
+    }
   }
 
   &-ButtonIcon {

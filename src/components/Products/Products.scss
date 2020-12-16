@@ -1,10 +1,20 @@
+@import "../../scss/config";
+
 .Products {
   display: flex;
   flex-direction: column;
   margin-top: 26px;
 
+  @media screen and (max-width: $break_md - 1px){
+    margin-top: 12px;
+  }
+
   &-Sorting {
     margin-bottom: 16px;
+
+    @media screen and (max-width: $break_md - 1px){
+      margin-top: 12px;
+    }
   }
 
   &-List {
@@ -12,10 +22,36 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 16px;
     margin-bottom: 24px;
+
+    @media screen and (max-width: $break_md - 1px){
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 8px;
+    }
+
+    @media screen and (max-width: $break_sm - 1px){
+      grid-template-columns: 1fr 1fr;
+    }
   }
 
   &-Button {
-    align-self: center;
-    margin-bottom: 24px;
+    &.Button {
+      align-self: center;
+      margin-bottom: 24px;
+      padding: 10px 16px;
+      
+      @media screen and (max-width: $break_sm - 1px){
+        padding: 8px 14px;
+      }
+
+      .Button-Text {
+        font-size: 14px;
+        line-height: 21px;
+
+        @media screen and (max-width: $break_sm - 1px){
+          font-size: 12px;
+          line-height: 20px;
+        }
+      }
+    }
   }
 }

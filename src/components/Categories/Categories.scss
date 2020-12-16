@@ -4,6 +4,10 @@
   margin-top: 16px;
   margin-bottom: 32px;
 
+  @media screen and (max-width: $break_sm - 1px){
+    margin-top: 6px;
+  }
+
   &-Gallery {
     display: grid;
     height: calc(100vh - 81px - 8px);
@@ -11,6 +15,14 @@
     grid-template-columns: 3.5fr 3.5fr 5fr;
     grid-auto-rows: 50%;
     grid-gap: 8px;
+
+    @media screen and (max-width: $break_sm - 1px){
+      //TODO: пересчитать когда исправлю шапку
+      height: calc(100vh - 81px - 8px);
+      grid-template-columns: 1fr 1fr;
+      grid-auto-rows: 33.33333%;
+      grid-gap: 4px;
+    }
   }
 
   &-GalleryItem {
@@ -44,6 +56,43 @@
       grid-row-start: 2;
       grid-row-end: 3;
     }
+
+    @media screen and (max-width: $break_sm - 1px){
+      &:nth-child(1) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+      }
+      &:nth-child(2) {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 4;
+      }
+      &:nth-child(3) {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+
+        .Categories-Text {
+          top: inherit;
+          bottom: 6px;
+        }
+      }
+      &:nth-child(4) {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+
+        .Categories-Text {
+          top: inherit;
+          bottom: 6px;
+        }
+      }
+    }
   }
 
   &-GalleryImage {
@@ -57,5 +106,12 @@
     left: 20px;
     z-index: 10;
     color: $black;
+
+    @media screen and (max-width: $break_sm - 1px){
+      top: 6px;
+      left: 12px;
+      font-size: 12px;
+      line-height: 22px;
+    }
   }
 }

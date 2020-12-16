@@ -10,6 +10,10 @@
   transition: background-color 0.2s linear;
   cursor: pointer;
 
+  @media screen and (max-width: $break_sm - 1px){
+    padding: 8px 14px;
+  }
+
   &:hover {
     background-color: $light-gray;
   }
@@ -21,8 +25,13 @@
   &-Text {
     font-family: $poppins;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 21px;
+    font-size: 16px;
+    line-height: 24px;
+
+    @media screen and (max-width: $break_sm - 1px){
+      font-size: 12px;
+      line-height: 22px;
+    }
   }
 
   &_secondary {

@@ -5,6 +5,7 @@ import { selectCategoriesList } from "../../redux/selectors/categoriesSelectors"
 import Categories from "../Categories/Categories";
 import Products from "../Products/Products";
 import Basket from "../Basket/Basket";
+import Hidden from "../Hidden/Hidden";
 
 const Routes = () => {
     const categories = useSelector(selectCategoriesList);
@@ -13,6 +14,9 @@ const Routes = () => {
         <Switch>
             <Route path="/" exact>
                 <Categories/>
+                <Hidden mdUp>
+                    <hr/>
+                </Hidden>
                 <Products/>
             </Route>
 
