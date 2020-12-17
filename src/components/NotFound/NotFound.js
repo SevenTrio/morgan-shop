@@ -19,7 +19,12 @@ const NotFound = () => {
                 4
             </p>
             <p className="NotFound-Text">Sorry, we can't find this page</p>
-            <Button className="NotFound-Button">HOME PAGE</Button>
+            <Button
+                className="NotFound-Button"
+                onClick={handleGoToHome}
+            >
+                HOME PAGE
+            </Button>
         </div>
     )
 }
