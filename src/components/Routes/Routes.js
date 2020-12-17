@@ -7,6 +7,7 @@ import Products from "../Products/Products";
 import Basket from "../Basket/Basket";
 import Hidden from "../Hidden/Hidden";
 import Login from "../Login/Login";
+import Registration from "../Registration/Registration";
 
 const Routes = () => {
     const categories = useSelector(selectCategoriesList);
@@ -26,7 +27,7 @@ const Routes = () => {
             </Route>
 
             <Route path="/registration" exact>
-                <h1>Registration</h1>
+                <Registration/>
             </Route>
 
             <Route path="/reset-password" exact>

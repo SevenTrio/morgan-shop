@@ -1,6 +1,6 @@
 @import "../../scss/config";
 
-.Login {
+.Registration {
   &-Container {
     width: 100%;
     max-width: 344px;
@@ -24,20 +24,44 @@
 
   &-Field {
     &_password {
-      margin-bottom: 36px;
+      margin-bottom: 28px;
+
+      .TextField-Label {
+        &:after {
+          content: " (min 6 char)";
+          color: $dark-gray
+        }
+      }
 
       @media screen and (max-width: $break_sm - 1px){
-        margin-bottom: 40px;
+        margin-bottom: 22px;
       }
 
       &.TextField_error {
-        margin-bottom: 10px;
+        margin-bottom: 2px;
 
         @media screen and (max-width: $break_sm - 1px){
-          margin-bottom: 24px;
+          margin-bottom: 6px;
         }
       }
     }
+  }
+
+  &-PrivacyPolicy {
+    margin-bottom: 8px;
+    font-size: 12px;
+    line-height: 22px;
+    color: $dark-gray;
+
+    @media screen and (max-width: $break_sm - 1px){
+      margin-bottom: 4px;
+    }
+  }
+
+  &-PrivacyPolicyLink {
+    margin: 0 .3em;
+    text-decoration: underline;
+    color: $dark-gray;
   }
 
   &-Button {
@@ -46,7 +70,7 @@
     }
   }
 
-  &-CreateAccount {
+  &-Login {
     display: flex;
     align-items: center;
     margin-top: 18px;
@@ -56,7 +80,7 @@
     }
   }
 
-  &-CreateAccountText {
+  &-LoginText {
     font-size: 12px;
     line-height: 22px;
 
@@ -66,7 +90,7 @@
     }
   }
 
-  &-CreateAccountLink {
+  &-LoginLink {
     margin-left: auto;
     font-size: 12px;
     line-height: 18px;
@@ -81,7 +105,7 @@
 
   &-Hr {
     position: relative;
-    margin-top: 37px;
+    margin-top: 32px;
     margin-bottom: 27px;
     border: none;
     border-bottom: 1px solid $gray;
@@ -113,11 +137,11 @@
     }
   }
 
-  &-FastLogin {
+  &-FastRegistration {
     display: flex;
   }
 
-  &-FastLoginButton {
+  &-FastRegistrationButton {
     &.Button {
       display: flex;
       flex: 1 1 150px;
@@ -143,7 +167,7 @@
     }
   }
 
-  &-FastLoginIcon {
+  &-FastRegistrationIcon {
     width: 24px;
     height: 24px;
     margin-right: 8px;

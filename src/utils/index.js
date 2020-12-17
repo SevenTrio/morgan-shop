@@ -25,7 +25,7 @@ export const validateEmail = (email) => {
 }
 
 export const validatePassword = (password) => {
-    if (password.length < 5) return false;
+    if (password.length < 6) return false;
 
     let count = 0;
 
