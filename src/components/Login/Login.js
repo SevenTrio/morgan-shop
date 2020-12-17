@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { setFieldValue, validateField, clearFieldError, submitForm} from "../../redux/actions/loginFormActions";
 import TextField from "../TextField/TextField";
 import Button from "../Button/Button";
 import Hidden from "../Hidden/Hidden";
@@ -8,6 +10,29 @@ import { ReactComponent as FacebookIcon } from './ic_facebook.svg';
 import "./Login.scss"
 
 const Login = () => {
+    const dispatch = useDispatch();
+    const fields = useSelector((state) => state.loginForm.fields);
+    const errors = useSelector((state) => state.loginForm.errors);
+
+    const handleChange = (e) => {
+        const field = e.target;
+        dispatch(setFieldValue(field));
+    };
+
+    const handleValidateField = (e) => {
+        const field = e.target;
+        dispatch(validateField(field));
+    }
+
+    const handleClearError = (e) => {
+        const field = e.target;
+        dispatch(clearFieldError(field));
+    }
+
+    const handleSubmit = () => {
+        dispatch(submitForm());
+    };
+    
     return(
         <div className="Login">
             <div className="Login-Container">
@@ -15,25 +40,35 @@ const Login = () => {
                 <div className="Login-Form">
                     <TextField
                         id="email"
+                        name="email"
                         label="Email"
                         className="Login-Field Login-Field_email"
                         placeholder="Enter your email"
-                        error=""
+                        value={fields.email}
+                        onFocus={handleClearError}
+                        onChange={handleChange}
+                        onBlur={handleValidateField}
+                        error={errors.email}
                     />
 
                     <TextField
                         id="password"
+                        name="password"
                         label="Password"
                         className="Login-Field Login-Field_password"
                         placeholder="Enter your password"
                         type="password"
-                        error=""
+                        value={fields.password}
+                        onFocus={handleClearError}
+                        onChange={handleChange}
+                        onBlur={handleValidateField}
+                        error={errors.password}
                         showForgotPasswordHint
                     />
 
                     <Button
                         className="Login-Button"
-                        onClick={() => console.log("login click")}
+                        onClick={handleSubmit}
                         variant="secondary"
                     >
                         LOG IN

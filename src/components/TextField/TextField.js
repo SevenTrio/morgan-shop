@@ -12,7 +12,7 @@ const TextField = ({
     error = "",
     type = "text",
     showForgotPasswordHint = false,
-    value = "Test",
+    value,
     onChange,
     ...props
 }) => {
@@ -27,8 +27,6 @@ const TextField = ({
     const handleHidePassword = () => {
         setHidePassword(true)
     }
-
-    error = "Some dangerous error";
 
     return(
         <div className={`TextField ${error.length ? "TextField_error" : ""} ${className}`}>
