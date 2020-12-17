@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/morgan-shop/static/css/main.ef370565.chunk.css",
+    "main.js": "/morgan-shop/static/js/main.c54b9e91.chunk.js",
+    "main.js.map": "/morgan-shop/static/js/main.c54b9e91.chunk.js.map",
+    "runtime-main.js": "/morgan-shop/static/js/runtime-main.8643331c.js",
+    "runtime-main.js.map": "/morgan-shop/static/js/runtime-main.8643331c.js.map",
+    "static/js/2.12b65047.chunk.js": "/morgan-shop/static/js/2.12b65047.chunk.js",
+    "static/js/2.12b65047.chunk.js.map": "/morgan-shop/static/js/2.12b65047.chunk.js.map",
+    "index.html": "/morgan-shop/index.html",
+    "static/css/main.ef370565.chunk.css.map": "/morgan-shop/static/css/main.ef370565.chunk.css.map",
+    "static/js/2.12b65047.chunk.js.LICENSE.txt": "/morgan-shop/static/js/2.12b65047.chunk.js.LICENSE.txt",
+    "static/media/0_char.9b6a592d.svg": "/morgan-shop/static/media/0_char.9b6a592d.svg",
+    "static/media/glowing_lamp.ca5f0e52.svg": "/morgan-shop/static/media/glowing_lamp.ca5f0e52.svg",
+    "static/media/ic_arrow_down.8172ad65.svg": "/morgan-shop/static/media/ic_arrow_down.8172ad65.svg",
+    "static/media/ic_check.dd688a37.svg": "/morgan-shop/static/media/ic_check.dd688a37.svg",
+    "static/media/ic_close.4cd3339a.svg": "/morgan-shop/static/media/ic_close.4cd3339a.svg",
+    "static/media/ic_eye_off.2d090da7.svg": "/morgan-shop/static/media/ic_eye_off.2d090da7.svg",
+    "static/media/ic_eye_on.4917d9c8.svg": "/morgan-shop/static/media/ic_eye_on.4917d9c8.svg",
+    "static/media/ic_facebook.3675488b.svg": "/morgan-shop/static/media/ic_facebook.3675488b.svg",
+    "static/media/ic_google.8e08f69a.svg": "/morgan-shop/static/media/ic_google.8e08f69a.svg",
+    "static/media/ic_menu.e1bd0499.svg": "/morgan-shop/static/media/ic_menu.e1bd0499.svg",
+    "static/media/ic_search.3df4b208.svg": "/morgan-shop/static/media/ic_search.3df4b208.svg",
+    "static/media/ic_shopping_card.1ea131fd.svg": "/morgan-shop/static/media/ic_shopping_card.1ea131fd.svg",
+    "static/media/ic_user.97ebb0d2.svg": "/morgan-shop/static/media/ic_user.97ebb0d2.svg",
+    "static/media/lamp.cea96dc4.svg": "/morgan-shop/static/media/lamp.cea96dc4.svg",
+    "static/media/paper-dove.73d95445.svg": "/morgan-shop/static/media/paper-dove.73d95445.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8643331c.js",
+    "static/js/2.12b65047.chunk.js",
+    "static/css/main.ef370565.chunk.css",
+    "static/js/main.c54b9e91.chunk.js"
+  ]
+}
