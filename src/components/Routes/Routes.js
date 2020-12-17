@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { Redirect, Route, Switch } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { selectCategoriesList } from "../../redux/selectors/categoriesSelectors";
 import Categories from "../Categories/Categories";
@@ -48,6 +48,10 @@ const Routes = () => {
 
             <Route path="/basket" exact>
                 <Basket/>
+            </Route>
+
+            <Route path="/morgan-shop" exact>
+                <Redirect to="/"/>
             </Route>
 
             <Route path="*">

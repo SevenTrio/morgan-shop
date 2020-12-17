@@ -1,7 +1,7 @@
 {
   "name": "morgan-shop",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "homepage": "http://SevenTrio.github.io/morgan-shop",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
