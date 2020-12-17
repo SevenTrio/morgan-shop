@@ -9,6 +9,7 @@ import Hidden from "../Hidden/Hidden";
 import Login from "../Login/Login";
 import Registration from "../Registration/Registration";
 import ResetPassword from "../ResetPassword/ResetPassword";
+import NotFound from "../NotFound/NotFound";
 
 const Routes = () => {
     const categories = useSelector(selectCategoriesList);
@@ -50,7 +51,7 @@ const Routes = () => {
             </Route>
 
             <Route path="*">
-                <h1>Not Found</h1>
+                <NotFound/>
             </Route>
         </Switch>
     )
