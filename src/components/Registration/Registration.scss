@@ -2,8 +2,10 @@
 
 .Registration {
   &-Container {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    max-width: 344px;
+    max-width: 368px;
     margin: 24px 0;
   }
 
@@ -48,13 +50,15 @@
   }
 
   &-PrivacyPolicy {
-    margin-bottom: 8px;
+    margin-bottom: 12px;
     font-size: 12px;
     line-height: 22px;
     color: $dark-gray;
 
     @media screen and (max-width: $break_sm - 1px){
-      margin-bottom: 4px;
+      margin-bottom: 8px;
+      font-size: 10px;
+      line-height: 18px;
     }
   }
 
@@ -161,7 +165,7 @@
       }
 
       .Button-Text {
-        font-size: 12px;
+        font-size: 14px;
         line-height: 21px;
       }
     }

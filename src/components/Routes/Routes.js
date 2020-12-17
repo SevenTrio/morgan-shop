@@ -8,6 +8,7 @@ import Basket from "../Basket/Basket";
 import Hidden from "../Hidden/Hidden";
 import Login from "../Login/Login";
 import Registration from "../Registration/Registration";
+import ResetPassword from "../ResetPassword/ResetPassword";
 
 const Routes = () => {
     const categories = useSelector(selectCategoriesList);
@@ -31,7 +32,7 @@ const Routes = () => {
             </Route>
 
             <Route path="/reset-password" exact>
-                <h1>Reset password</h1>
+                <ResetPassword/>
             </Route>
 
             {categories && categories.map(category =>

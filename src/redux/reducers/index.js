@@ -6,6 +6,7 @@ import products from "./productsReducer";
 import menu from "./menuReducer";
 import loginForm from "./loginFormReducer";
 import registrationForm from "./registrationFormReducer";
+import resetPasswordForm from "./resetPasswordFormReducer";
 
 export default combineReducers({
     categories,
@@ -14,4 +15,5 @@ export default combineReducers({
     menu,
     loginForm,
     registrationForm,
+    resetPasswordForm,
 });

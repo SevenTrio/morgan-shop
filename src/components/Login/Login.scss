@@ -1,9 +1,15 @@
 @import "../../scss/config";
 
 .Login {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
   &-Container {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    max-width: 344px;
+    max-width: 368px;
     margin: 24px 0;
   }
 
@@ -20,6 +26,10 @@
       font-size: 12px;
       line-height: 22px;
     }
+  }
+
+  &-Form {
+    width: 100%;
   }
 
   &-Field {
@@ -137,7 +147,7 @@
       }
 
       .Button-Text {
-        font-size: 12px;
+        font-size: 14px;
         line-height: 21px;
       }
     }
