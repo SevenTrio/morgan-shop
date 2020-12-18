@@ -1,0 +1,40 @@
+@import "../../scss/config";
+
+.Basket {
+  &-Heading {
+    margin: 24px 0;
+    font-size: 18px;
+    line-height: 27px;
+    text-transform: uppercase;
+    text-align: center;
+
+    @media screen and (max-width: $break_sm - 1px){
+      margin-top: 0;
+      font-size: 12px;
+      line-height: 22px;
+    }
+  }
+
+  &-Content {
+    display: flex;
+    flex: 1 1 auto;
+
+    @media screen and (max-width: $break_md - 1px){
+      flex-direction: column;
+    }
+
+    @media screen and (max-width: $break_sm - 1px){
+      min-height: calc(100vh - 48px - 24px - 46px - 24px);
+    }
+  }
+
+  &-Products {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+
+    @media screen and (max-width: $break_md - 1px){
+      margin-bottom: 32px;
+    }
+  }
+}

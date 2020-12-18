@@ -1,0 +1,54 @@
+@import "../../scss/config";
+
+.BasketEmpty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  width: 100%;
+  max-width: 368px;
+
+  &-Heading {
+    margin: 24px 0;
+    font-size: 18px;
+    line-height: 27px;
+    text-transform: uppercase;
+    text-align: center;
+
+    @media screen and (max-width: $break_sm - 1px){
+      margin-top: 0;
+      font-size: 12px;
+      line-height: 22px;
+    }
+  }
+
+  &-Image {
+    width: 80px;
+    height: auto;
+    margin-bottom: 24px;
+
+    @media screen and (max-width: $break_sm - 1px){
+      width: 34px;
+    }
+  }
+
+  &-Text {
+    margin-bottom: 36px;
+
+    @media screen and (max-width: $break_sm - 1px){
+      font-size: 12px;
+      line-height: 22px;
+      margin-bottom: 16px;
+    }
+  }
+
+  &-Button {
+    &.Button {
+      width: 100%;
+
+      .Button-Text {
+        text-transform: uppercase;
+      }
+    }
+  }
+}

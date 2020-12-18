@@ -1,0 +1,114 @@
+@import "../../scss/config";
+
+.BasketSummary {
+  margin-left: 54px;
+
+  @media screen and (max-width: $break_md - 1px){
+    margin-top: auto;
+    margin-left: 0;
+  }
+
+  &-Container {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 auto;
+    width: 272px;
+    padding: 8px 12px;
+    border: 1px solid $gray;
+
+    @media screen and (max-width: $break_md - 1px){
+      width: 100%;
+      padding: 0;
+      border: none;
+    }
+  }
+
+  &-Title {
+    margin-bottom: 10px;
+    font-size: 12px;
+    line-height: 22px;
+    color: $dark-gray;
+  }
+
+  &-List {
+    margin-bottom: 16px;
+    border-bottom: 1px solid $light-gray;
+
+    @media screen and (max-width: $break_sm - 1px){
+      margin-bottom: 8px;
+    }
+  }
+
+  &-ListItem {
+    display: flex;
+    margin-bottom: 10px;
+    font-size: 12px;
+    line-height: 22px;
+
+    @media screen and (max-width: $break_sm - 1px){
+      margin-bottom: 3px;
+      font-size: 10px;
+      line-height: 16px;
+    }
+
+    &:last-child {
+      margin: 18px 0;
+
+      @media screen and (max-width: $break_sm - 1px){
+        margin: 3px 0;
+      }
+    }
+  }
+
+  &-ProductPrice {
+    margin-left: auto;
+  }
+
+  &-Estimate {
+    display: flex;
+    margin-bottom: 18px;
+
+    @media screen and (max-width: $break_sm - 1px){
+      margin-bottom: 14px;
+    }
+
+    &Title {
+      font-size: 12px;
+      line-height: 22px;
+      color: $dark-gray;
+
+      @media screen and (max-width: $break_sm - 1px){
+        font-size: 10px;
+        line-height: 16px;
+      }
+    }
+
+    &Price {
+      margin-left: auto;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 21px;
+
+      @media screen and (max-width: $break_sm - 1px){
+        font-size: 12px;
+        line-height: 22px;
+      }
+    }
+  }
+
+  &-Button {
+    width: 100%;
+  }
+
+  &-Link {
+    margin-top: 12px;
+    text-align: center;
+    text-decoration-line: underline;
+    color: $black;
+
+    @media screen and (max-width: $break_sm - 1px){
+      font-size: 10px;
+      line-height: 15px;
+    }
+  }
+}

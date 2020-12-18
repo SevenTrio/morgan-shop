@@ -7,6 +7,12 @@ export const selectCategoriesList = createSelector(
     (categories) => categories.categories
 );
 
+export const selectCategoryById = (id) => (
+    createSelector([selectCategoriesList], (categories) =>
+        categories.find((category) => category.id === id)
+    )
+);
+
 export const selectCategoryByAlias = (alias) => (
     createSelector([selectCategoriesList], (categories) =>
         categories.find((category) => category.alias === alias)

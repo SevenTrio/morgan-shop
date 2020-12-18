@@ -1,0 +1,175 @@
+@import "../../scss/config";
+
+.BasketProductCard {
+  position: relative;
+  display: flex;
+  height: 184px;
+  margin-bottom: 24px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media screen and (max-width: $break_sm - 1px){
+    height: 80px;
+  }
+
+  &-Image {
+    height: 184px;
+    width: 176px;
+
+    @media screen and (max-width: $break_sm - 1px){
+      height: 80px;
+      width: 68px;
+    }
+  }
+
+  &-Props {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    margin-left: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid $gray;
+
+    @media screen and (max-width: $break_sm - 1px){
+      margin-left: 8px;
+      padding-bottom: 6px;
+    }
+  }
+
+  &-Category {
+    font-size: 12px;
+    line-height: 22px;
+    color: $dark-gray;
+
+    @media screen and (max-width: $break_sm - 1px){
+      font-size: 10px;
+      line-height: 16px;
+    }
+  }
+
+  &-Name {
+    font-size: 18px;
+    line-height: 27px;
+
+    @media screen and (max-width: $break_sm - 1px){
+      font-size: 10px;
+      line-height: 16px;
+    }
+  }
+
+  &-RemoveButton {
+    &.IconButton {
+      position: absolute;
+      top: 0;
+      right: -5px;
+      padding: 5px;
+      z-index: 10;
+
+      .IconButton-Icon {
+        height: 20px;
+        width: 20px;
+
+        @media screen and (max-width: $break_sm - 1px){
+          height: 16px;
+          width: 16px;
+        }
+      }
+    }
+  }
+
+  &-BottomLine {
+    display: flex;
+    margin-top: auto;
+  }
+
+  &-Price {
+    align-self: flex-end;
+    margin-left: auto;
+    font-weight: 500;
+
+    @media screen and (max-width: $break_sm - 1px){
+      font-size: 12px;
+      line-height: 22px;
+    }
+  }
+
+  &-Quantity {
+    display: flex;
+    flex-direction: column;
+
+    &Title {
+      margin-bottom: 8px;
+      font-size: 12px;
+      line-height: 22px;
+      color: $dark-gray;
+
+      @media screen and (max-width: $break_sm - 1px){
+        display: none;
+      }
+    }
+
+    &Actions {
+      display: flex;
+    }
+
+    &Button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 32px;
+      width: 32px;
+      padding: 0;
+      background-color: transparent;
+      border: 1px solid $black;
+      transition: background-color 0.2s linear;
+
+      &:hover {
+        background-color: $light-gray;
+      }
+
+      &:active {
+        background-color: darken($light-gray, 8%);
+      }
+
+      @media screen and (max-width: $break_sm - 1px){
+        height: 22px;
+        width: 22px;
+      }
+    }
+
+    &ButtonText {
+      font-family: $montserrat;
+      font-weight: 200;
+      font-size: 32px;
+      line-height: 32px;
+
+      @media screen and (max-width: $break_sm - 1px){
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
+
+    &Value {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 32px;
+      width: 32px;
+      margin: 0 8px;
+      border: 1px solid $gray;
+
+      @media screen and (max-width: $break_sm - 1px){
+        height: 22px;
+        width: 22px;
+      }
+    }
+
+    &ValueText {
+      font-size: 10px;
+      line-height: 22px;
+    }
+  }
+}
