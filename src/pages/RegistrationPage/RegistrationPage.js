@@ -2,14 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { setFieldValue, validateField, clearFieldError, submitForm} from "../../redux/actions/registrationFormActions";
-import TextField from "../TextField/TextField";
-import Button from "../Button/Button";
-import Hidden from "../Hidden/Hidden";
+import TextField from "../../components/TextField/TextField";
+import Button from "../../components/Button/Button";
+import Hidden from "../../components/Hidden/Hidden";
 import { ReactComponent as GoogleIcon } from './ic_google.svg';
 import { ReactComponent as FacebookIcon } from './ic_facebook.svg';
-import "./Registration.scss"
+import "./RegistrationPage.scss"
 
-const Registration = () => {
+const RegistrationPage = () => {
     const dispatch = useDispatch();
     const fields = useSelector((state) => state.registrationForm.fields);
     const errors = useSelector((state) => state.registrationForm.errors);
@@ -35,15 +35,15 @@ const Registration = () => {
     };
 
     return(
-        <div className="Registration">
-            <div className="Registration-Container">
-                <h1 className="Registration-Heading">Create account</h1>
-                <div className="Registration-Form">
+        <div className="RegistrationPage">
+            <div className="RegistrationPage-Container">
+                <h1 className="RegistrationPage-Heading">Create account</h1>
+                <div className="RegistrationPage-Form">
                     <TextField
                         id="fullName"
                         name="fullName"
                         label="Full Name"
-                        className="Registration-Field Registration-Field_fullName"
+                        className="RegistrationPage-Field RegistrationPage-Field_fullName"
                         placeholder="Enter your email"
                         value={fields.fullName}
                         onFocus={handleClearError}
@@ -56,7 +56,7 @@ const Registration = () => {
                         id="email"
                         name="email"
                         label="Email"
-                        className="Registration-Field Registration-Field_email"
+                        className="RegistrationPage-Field RegistrationPage-Field_email"
                         placeholder="Enter your email"
                         value={fields.email}
                         onFocus={handleClearError}
@@ -69,7 +69,7 @@ const Registration = () => {
                         id="password"
                         name="password"
                         label="Password"
-                        className="Registration-Field Registration-Field_password"
+                        className="RegistrationPage-Field RegistrationPage-Field_password"
                         placeholder="Enter your password"
                         type="password"
                         value={fields.password}
@@ -79,49 +79,49 @@ const Registration = () => {
                         error={errors.password}
                     />
 
-                    <p className="Registration-PrivacyPolicy">
+                    <p className="RegistrationPage-PrivacyPolicy">
                         By creating an account you agree to the website
-                        <Link to="/terms-and-conditions" className="Registration-PrivacyPolicyLink">
+                        <Link to="/terms-and-conditions" className="RegistrationPage-PrivacyPolicyLink">
                             terms and conditions
                         </Link>
                         and our
-                        <Link to="/privacy-notice" className="Registration-PrivacyPolicyLink">
+                        <Link to="/privacy-notice" className="RegistrationPage-PrivacyPolicyLink">
                             privacy notice.
                         </Link>
                     </p>
 
                     <Button
-                        className="Registration-Button"
+                        className="RegistrationPage-Button"
                         onClick={handleSubmit}
                         variant="secondary"
                     >
                         CREATE AN ACCOUNT
                     </Button>
 
-                    <div className="Registration-Login">
-                        <span className="Registration-LoginText">
+                    <div className="RegistrationPage-Login">
+                        <span className="RegistrationPage-LoginText">
                             Have an account?
                         </span>
-                        <Link to="/login" className="Registration-LoginLink">
+                        <Link to="/login" className="RegistrationPage-LoginLink">
                             Login
                         </Link>
                     </div>
 
-                    <div className="Registration-Hr"/>
+                    <div className="RegistrationPage-Hr"/>
 
-                    <div className="Registration-FastRegistration">
+                    <div className="RegistrationPage-FastRegistration">
                         <Button
-                            className="Registration-FastRegistrationButton"
+                            className="RegistrationPage-FastRegistrationButton"
                         >
-                            <GoogleIcon className="Registration-FastRegistrationIcon"/>
+                            <GoogleIcon className="RegistrationPage-FastRegistrationIcon"/>
                             <Hidden smDown>
                                 With Google
                             </Hidden>
                         </Button>
                         <Button
-                            className="Registration-FastRegistrationButton"
+                            className="RegistrationPage-FastRegistrationButton"
                         >
-                            <FacebookIcon className="Registration-FastRegistrationIcon"/>
+                            <FacebookIcon className="RegistrationPage-FastRegistrationIcon"/>
                             <Hidden smDown>
                                 With Facebook
                             </Hidden>
@@ -133,4 +133,4 @@ const Registration = () => {
     )
 }
 
-export default Registration;
+export default RegistrationPage;

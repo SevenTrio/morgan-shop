@@ -2,14 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { setFieldValue, validateField, clearFieldError, submitForm} from "../../redux/actions/loginFormActions";
-import TextField from "../TextField/TextField";
-import Button from "../Button/Button";
-import Hidden from "../Hidden/Hidden";
+import TextField from "../../components/TextField/TextField";
+import Button from "../../components/Button/Button";
+import Hidden from "../../components/Hidden/Hidden";
 import { ReactComponent as GoogleIcon } from './ic_google.svg';
 import { ReactComponent as FacebookIcon } from './ic_facebook.svg';
-import "./Login.scss"
+import "./LoginPage.scss"
 
-const Login = () => {
+const LoginPage = () => {
     const dispatch = useDispatch();
     const fields = useSelector((state) => state.loginForm.fields);
     const errors = useSelector((state) => state.loginForm.errors);
@@ -34,15 +34,15 @@ const Login = () => {
     };
     
     return(
-        <div className="Login">
-            <div className="Login-Container">
-                <h1 className="Login-Heading">Login</h1>
-                <div className="Login-Form">
+        <div className="LoginPage">
+            <div className="LoginPage-Container">
+                <h1 className="LoginPage-Heading">Login</h1>
+                <div className="LoginPage-Form">
                     <TextField
                         id="email"
                         name="email"
                         label="Email"
-                        className="Login-Field Login-Field_email"
+                        className="LoginPage-Field LoginPage-Field_email"
                         placeholder="Enter your email"
                         value={fields.email}
                         onFocus={handleClearError}
@@ -55,7 +55,7 @@ const Login = () => {
                         id="password"
                         name="password"
                         label="Password"
-                        className="Login-Field Login-Field_password"
+                        className="LoginPage-Field LoginPage-Field_password"
                         placeholder="Enter your password"
                         type="password"
                         value={fields.password}
@@ -67,37 +67,37 @@ const Login = () => {
                     />
 
                     <Button
-                        className="Login-Button"
+                        className="LoginPage-Button"
                         onClick={handleSubmit}
                         variant="secondary"
                     >
                         LOG IN
                     </Button>
 
-                    <div className="Login-CreateAccount">
-                        <span className="Login-CreateAccountText">
+                    <div className="LoginPage-CreateAccount">
+                        <span className="LoginPage-CreateAccountText">
                             Don't have an account?
                         </span>
-                        <Link to="/registration" className="Login-CreateAccountLink">
+                        <Link to="/registration" className="LoginPage-CreateAccountLink">
                             Create an account
                         </Link>
                     </div>
 
-                    <div className="Login-Hr"/>
+                    <div className="LoginPage-Hr"/>
 
-                    <div className="Login-FastLogin">
+                    <div className="LoginPage-FastLogin">
                         <Button
-                            className="Login-FastLoginButton"
+                            className="LoginPage-FastLoginButton"
                         >
-                            <GoogleIcon className="Login-FastLoginIcon"/>
+                            <GoogleIcon className="LoginPage-FastLoginIcon"/>
                             <Hidden smDown>
                                 With Google
                             </Hidden>
                         </Button>
                         <Button
-                            className="Login-FastLoginButton"
+                            className="LoginPage-FastLoginButton"
                         >
-                            <FacebookIcon className="Login-FastLoginIcon"/>
+                            <FacebookIcon className="LoginPage-FastLoginIcon"/>
                             <Hidden smDown>
                                 With Facebook
                             </Hidden>
@@ -109,4 +109,4 @@ const Login = () => {
     )
 }
 
-export default Login;
+export default LoginPage;

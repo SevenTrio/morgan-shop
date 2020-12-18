@@ -2,14 +2,13 @@ import React from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { selectCategoriesList } from "../../redux/selectors/categoriesSelectors";
-import Categories from "../Categories/Categories";
-import Products from "../Products/Products";
-import Basket from "../Basket/Basket";
-import Hidden from "../Hidden/Hidden";
-import Login from "../Login/Login";
-import Registration from "../Registration/Registration";
-import ResetPassword from "../ResetPassword/ResetPassword";
-import NotFound from "../NotFound/NotFound";
+import HomePage from "../../pages/HomePage/HomePage";
+import CategoryPage from "../../pages/CategoryPage/CategoryPage";
+import BasketPage from "../../pages/BasketPage/BasketPage";
+import LoginPage from "../../pages/LoginPage/LoginPage";
+import RegistrationPage from "../../pages/RegistrationPage/RegistrationPage";
+import ResetPasswordPage from "../../pages/ResetPasswordPage/ResetPasswordPage";
+import NotFoundPage from "../../pages/NotFoundPage/NotFoundPage";
 
 const Routes = () => {
     const categories = useSelector(selectCategoriesList);
@@ -17,23 +16,19 @@ const Routes = () => {
     return(
         <Switch>
             <Route path="/" exact>
-                <Categories/>
-                <Hidden mdUp>
-                    <hr/>
-                </Hidden>
-                <Products/>
+                <HomePage/>
             </Route>
 
             <Route path="/login" exact>
-                <Login/>
+                <LoginPage/>
             </Route>
 
             <Route path="/registration" exact>
-                <Registration/>
+                <RegistrationPage/>
             </Route>
 
             <Route path="/reset-password" exact>
-                <ResetPassword/>
+                <ResetPasswordPage/>
             </Route>
 
             {categories && categories.map(category =>
@@ -42,20 +37,21 @@ const Routes = () => {
                     path={"/" + category.alias}
                     exact
                 >
-                    <Products category={category}/>
+                    <CategoryPage category={category}/>
                 </Route>
             )}
 
             <Route path="/basket" exact>
-                <Basket/>
+                <BasketPage/>
             </Route>
 
+            {/*to work properly on github pages*/}
             <Route path="/morgan-shop" exact>
                 <Redirect to="/"/>
             </Route>
 
             <Route path="*">
-                <NotFound/>
+                <NotFoundPage/>
             </Route>
         </Switch>
     )
