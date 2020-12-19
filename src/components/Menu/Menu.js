@@ -1,12 +1,13 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from "react-redux";
-import { showMenu, hideMenu } from "../../redux/actions/menuActions";
+import { hideMenu } from "../../redux/actions/menuActions";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 import { ReactComponent as CloseIcon } from './ic_close.svg';
 import { ReactComponent as SearchIcon } from './ic_search.svg';
 import { Portal } from 'react-portal';
 import IconButton from "../IconButton/IconButton";
 import Navigation from "../Navigation/Navigation";
+import Logo from "../Logo/Logo";
 import './Menu.scss'
 
 const Menu = ( ) => {
@@ -43,6 +44,12 @@ const Menu = ( ) => {
                                 className="Menu-IconButton Menu-CloseButton"
                                 onClick={handleClose}
                             />
+
+                            <Logo
+                                className="Menu-Logo"
+                                onClick={handleClose}
+                            />
+
                             <IconButton
                                 icon={SearchIcon}
                                 className="Menu-IconButton Menu-SearchButton"

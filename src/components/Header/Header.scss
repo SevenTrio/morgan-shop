@@ -43,24 +43,6 @@
         left: 50%;
         margin-right: -50%;
         transform: translate(-50%, -50%);
-        z-index: 10000;
-      }
-
-      .Logo-Link {
-        padding: 15px;
-
-        @media screen and (max-width: $break_sm - 1px){
-          padding: 9px;
-        }
-      }
-
-      .Logo-Image {
-        height: 34px;
-        width: auto;
-
-        @media screen and (max-width: $break_sm - 1px){
-          height: 28px;
-        }
       }
     }
   }
