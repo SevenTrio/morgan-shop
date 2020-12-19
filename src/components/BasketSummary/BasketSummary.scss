@@ -9,6 +9,9 @@
   }
 
   &-Container {
+    position: sticky;
+    top: 40px;
+    max-height: calc(100vh - 204px);
     display: flex;
     flex-direction: column;
     flex: 0 1 auto;
@@ -17,6 +20,8 @@
     border: 1px solid $gray;
 
     @media screen and (max-width: $break_md - 1px){
+      position: relative;
+      top: inherit;
       width: 100%;
       padding: 0;
       border: none;
@@ -31,6 +36,7 @@
   }
 
   &-List {
+    overflow: auto;
     margin-bottom: 16px;
     border-bottom: 1px solid $light-gray;
 
