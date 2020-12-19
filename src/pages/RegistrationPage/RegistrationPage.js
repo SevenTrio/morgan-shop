@@ -5,6 +5,7 @@ import { setFieldValue, validateField, clearFieldError, submitForm} from "../../
 import TextField from "../../components/TextField/TextField";
 import Button from "../../components/Button/Button";
 import Hidden from "../../components/Hidden/Hidden";
+import Divider from "../../components/Divider/Divider";
 import { ReactComponent as GoogleIcon } from './ic_google.svg';
 import { ReactComponent as FacebookIcon } from './ic_facebook.svg';
 import "./RegistrationPage.scss"
@@ -107,7 +108,7 @@ const RegistrationPage = () => {
                         </Link>
                     </div>
 
-                    <div className="RegistrationPage-Hr"/>
+                    <Divider className="RegistrationPage-Divider" text="or"/>
 
                     <div className="RegistrationPage-FastRegistration">
                         <Button
