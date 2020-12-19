@@ -6,6 +6,12 @@
   border-bottom: 1px solid $gray;
   background-color: $white;
 
+  @media screen and (max-width: $break_md - 1px){
+    position: fixed;
+    top: 0;
+    z-index: 100;
+  }
+
   @media screen and (max-width: $break_sm - 1px){
     height: 48px;
   }
