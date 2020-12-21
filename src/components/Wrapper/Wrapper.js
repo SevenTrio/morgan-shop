@@ -4,7 +4,8 @@ import './Wrapper.scss';
 const Wrapper = ({ children, className = "", ...props }) => {
     return (
         <div
-            className={`Wrapper ${className}`} {...props}
+            className={`Wrapper ${className}`}
+            {...props}
         >
             {children}
         </div>

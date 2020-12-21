@@ -5,6 +5,8 @@ import {
     removeAllCopiesFromBasket,
     removeFromBasket,
 } from "../../redux/actions/basketActions";
+import Container from "../../components/Container/Container";
+import PageHeading from "../../components/PageHeading/PageHeading";
 import BasketProductCard from "../BasketProductCard/BasketProductCard";
 import BasketSummary from "../BasketSummary/BasketSummary";
 import "./Basket.scss"
@@ -26,24 +28,26 @@ const Basket = () => {
     }
 
     return(
-        <Fragment>
-            <h1 className="Basket-Heading">Basket</h1>
-            <div className="Basket-Content">
-                <div className="Basket-Products">
-                    {basket.products.map(product =>
-                        <BasketProductCard
-                            key={product.id}
-                            product={product}
-                            addToBasket={handleAddToBasket}
-                            removeFromBasket={handleRemoveFromBasket}
-                            removeAllCopiesFromBasket={handleRemoveAllCopiesFromBasket}
-                        />
-                    )}
-                </div>
+        <div className="Basket">
+            <Container className="Basket-Container">
+                <PageHeading className="Basket-Heading">Basket</PageHeading>
+                <div className="Basket-Content">
+                    <div className="Basket-Products">
+                        {basket.products.map(product =>
+                            <BasketProductCard
+                                key={product.id}
+                                product={product}
+                                addToBasket={handleAddToBasket}
+                                removeFromBasket={handleRemoveFromBasket}
+                                removeAllCopiesFromBasket={handleRemoveAllCopiesFromBasket}
+                            />
+                        )}
+                    </div>
 
-                <BasketSummary/>
-            </div>
-        </Fragment>
+                    <BasketSummary/>
+                </div>
+            </Container>
+        </div>
     )
 }
 

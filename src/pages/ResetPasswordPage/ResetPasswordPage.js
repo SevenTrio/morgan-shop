@@ -2,6 +2,8 @@ import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { setFieldValue, validateField, clearFieldError, submitForm} from "../../redux/actions/resetPasswordFormActions";
+import Container from "../../components/Container/Container";
+import PageHeading from "../../components/PageHeading/PageHeading";
 import TextField from "../../components/TextField/TextField";
 import Button from "../../components/Button/Button";
 import paperDoveImage from "./paper-dove.svg";
@@ -32,10 +34,10 @@ const ResetPasswordPage = () => {
 
     return(
         <div className="ResetPasswordPage">
-            <div className="ResetPasswordPage-Container">
+            <Container className="ResetPasswordPage-Container">
                 {!resetPasswordForm.isSent ?
                     <Fragment>
-                        <h1 className="ResetPasswordPage-Heading">RESET YOUR PASSWORD</h1>
+                        <PageHeading className="ResetPasswordPage-PageHeading">Reset your password</PageHeading>
                         <div className="ResetPasswordPage-Form">
                             <p className="ResetPasswordPage-Text">
                                 Enter the email address for your Morgan account and we’ll send a single-use password reset link.
@@ -63,7 +65,7 @@ const ResetPasswordPage = () => {
                                 onClick={handleSubmit}
                                 variant="secondary"
                             >
-                                SEND A PASSWORD RESET LINK
+                                Send a password reset link
                             </Button>
 
                             <div className="ResetPasswordPage-BackToLogin">
@@ -75,15 +77,14 @@ const ResetPasswordPage = () => {
                     </Fragment>
                     :
                     <Fragment>
-                        <h1 className="ResetPasswordPage-Heading">YOUR LINK HAS BEEN SENT</h1>
+                        <PageHeading className="ResetPasswordPage-PageHeading">Your link has been sent</PageHeading>
                         <img src={paperDoveImage} alt="" className="ResetPasswordPage-SentImg"/>
                         <p className="ResetPasswordPage-SentText">We have sent a password reset email to your address:</p>
                         <p className="ResetPasswordPage-SentEmail">{resetPasswordForm.email}</p>
                         <p className="ResetPasswordPage-SentHint">If you can’t find the email, please check your junk folder.</p>
                     </Fragment>
                 }
-
-            </div>
+            </Container>
         </div>
     )
 }
