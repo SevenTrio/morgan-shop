@@ -1,6 +1,5 @@
 import React from "react";
-import './Header.scss'
-
+import Wrapper from "../Wrapper/Wrapper";
 import Hamburger from "../Hamburger/Hamburger";
 import Logo from "../Logo/Logo";
 import Navigation from "../Navigation/Navigation";
@@ -8,11 +7,12 @@ import SearchAction from "../SearchAction/SearchAction";
 import ProfileAction from "../ProfileAction/ProfileAction";
 import BasketAction from "../BasketAction/BasketAction";
 import Hidden from "../Hidden/Hidden";
+import './Header.scss'
 
 const Header = () => {
     return (
         <header className="Header">
-            <div className="Header-Container">
+            <Wrapper className="Header-Wrapper">
                 <Hidden mdUp>
                     <Hamburger/>
                 </Hidden>
@@ -33,7 +33,7 @@ const Header = () => {
                         activeClassName="Header-Action_active"
                     />
                 </div>
-            </div>
+            </Wrapper>
         </header>
     );
 };

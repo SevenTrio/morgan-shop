@@ -5,6 +5,7 @@ import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 import { ReactComponent as CloseIcon } from './ic_close.svg';
 import { ReactComponent as SearchIcon } from './ic_search.svg';
 import { Portal } from 'react-portal';
+import Wrapper from "../Wrapper/Wrapper";
 import IconButton from "../IconButton/IconButton";
 import Navigation from "../Navigation/Navigation";
 import Logo from "../Logo/Logo";
@@ -38,7 +39,7 @@ const Menu = ( ) => {
                     className="Menu"
                 >
                     <div className="Menu-Header">
-                        <div className="Menu-Container">
+                        <Wrapper className="Menu-Wrapper">
                             <IconButton
                                 icon={CloseIcon}
                                 className="Menu-IconButton Menu-CloseButton"
@@ -54,15 +55,15 @@ const Menu = ( ) => {
                                 icon={SearchIcon}
                                 className="Menu-IconButton Menu-SearchButton"
                             />
-                        </div>
+                        </Wrapper>
                     </div>
                     <div className="Menu-Content">
-                        <div className="Menu-Container">
+                        <Wrapper className="Menu-Wrapper">
                             <div className="Menu-Products">
                                 <p className="Menu-ProductsTitle">PRODUCTS</p>
                                 <Navigation className="Menu-Navigation" onNavLinkClick={handleClose}/>
                             </div>
-                        </div>
+                        </Wrapper>
                     </div>
                 </div>
             </Portal>

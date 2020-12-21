@@ -16,22 +16,10 @@
     height: 48px;
   }
 
-  &-Container {
-    position: relative;
-    display: flex;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    max-width: $max-width;
-    margin: 0 auto;
-    padding: 0 $fields;
-
-    @media screen and (max-width: $break_md - 1px){
-      padding: 0 $fields-md;
-    }
-
-    @media screen and (max-width: $break_sm - 1px){
-      padding: 0 $fields-sm;
+  &-Wrapper {
+    &.Wrapper {
+      position: relative;
+      align-items: center;
     }
   }
 
