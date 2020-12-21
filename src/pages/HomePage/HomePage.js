@@ -3,7 +3,7 @@ import Categories from "../../components/Categories/Categories";
 import Hidden from "../../components/Hidden/Hidden";
 import Products from "../../components/Products/Products";
 import Divider from "../../components/Divider/Divider";
-import "./HomePage.scss"
+// import "./HomePage.scss"
 
 const HomePage = () => {
     return(
