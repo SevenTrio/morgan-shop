@@ -5,11 +5,11 @@ import { selectCategoriesList } from "../../redux/selectors/categoriesSelectors"
 import { Link } from "react-router-dom";
 import './Categories.scss';
 
-const Categories = () => {
-    const categories = useSelector(selectCategoriesList)
+const Categories = ({ className = "" }) => {
+    const categories = useSelector(selectCategoriesList);
 
     return (
-        <div className="Categories">
+        <div className={`Categories ${className}`}>
             <div className="Categories-Gallery">
                 {categories && categories.map(category =>
                     <div key={category.id} className="Categories-GalleryItem">

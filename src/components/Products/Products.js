@@ -6,7 +6,7 @@ import Sorting from "../Sorting/Sorting";
 import Button from "../Button/Button";
 import './Products.scss';
 
-const Products = ({ category }) => {
+const Products = ({ category, className = "" }) => {
     const sortType = useSelector((state) => state.products.sortType);
     const products = useSelector(selectProductsByCategoryWithSorting(category, sortType));
     const [productsPresented, setProductsPresented] = useState(12);
@@ -20,7 +20,7 @@ const Products = ({ category }) => {
     }
 
     return (
-        <div className="Products">
+        <div className={`Products ${className}`}>
             <Sorting className="Products-Sorting"/>
             <div className="Products-List">
                 {products

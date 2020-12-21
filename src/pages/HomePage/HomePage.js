@@ -8,11 +8,11 @@ import "./HomePage.scss"
 const HomePage = () => {
     return(
         <div className="HomePage">
-            <Categories/>
-            <Hidden mdUp>
+            <Categories className="HomePage-Categories"/>
+            <Hidden smUp>
                 <Divider className="HomePage-Divider"/>
             </Hidden>
-            <Products/>
+            <Products className="HomePage-Products"/>
         </div>
     )
 }

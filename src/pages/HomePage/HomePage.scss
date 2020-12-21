@@ -1,0 +1,25 @@
+@import "../../scss/config";
+
+.HomePage {
+  padding: 16px 0;
+
+  @media screen and (max-width: $break_sm - 1px){
+    padding: 6px 0;
+  }
+
+  &-Categories {
+    &.Categories {
+      margin-bottom: 40px;
+
+      @media screen and (max-width: $break_sm - 1px){
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  &-Divider {
+    &.Divider {
+      margin-bottom: 12px;
+    }
+  }
+}
