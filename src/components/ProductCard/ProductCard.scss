@@ -7,10 +7,26 @@
   padding-bottom: 16px;
   background-color: $light-gray;
 
-  &-Image {
+  &-ImageWrapper {
+    position: relative;
     width: 100%;
-    height: auto;
-    margin-bottom: 16px;
+    padding-top: 100%;
+  }
+
+  &-Image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    object-fit: cover;
+
+    &_loading {
+      background: linear-gradient(45deg, lighten($dark-gray, 15%), $light-gray, lighten($dark-gray, 15%));
+      background-size: 400% 400%;
+      animation: gradient 3s linear infinite;
+    }
   }
 
   &-Button {
@@ -44,5 +60,17 @@
       font-size: 10px;
       line-height: 16px;
     }
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+   background-position: 100% 50%;
+  }
+  100% {
+   background-position: 0 50%;
   }
 }
