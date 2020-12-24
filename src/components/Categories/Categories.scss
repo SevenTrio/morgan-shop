@@ -88,8 +88,11 @@
   }
 
   &-GalleryImage {
-    height: 100%;
-    width: 100%;
+    &.ProductImage {
+      padding-top: 0;
+      height: 100%;
+      width: 100%;
+    }
   }
 
   &-Text {

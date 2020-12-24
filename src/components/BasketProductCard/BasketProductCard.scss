@@ -15,12 +15,15 @@
   }
 
   &-Image {
-    height: 184px;
-    width: 176px;
+    &.ProductImage {
+      padding-top: 0;
+      height: 184px;
+      width: 176px;
 
-    @media screen and (max-width: $break_sm - 1px){
-      height: 80px;
-      width: 68px;
+      @media screen and (max-width: $break_sm - 1px){
+        height: 80px;
+        width: 68px;
+      }
     }
   }
 

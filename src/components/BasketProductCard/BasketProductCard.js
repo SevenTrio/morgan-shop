@@ -3,6 +3,7 @@ import { API_HOST } from "../../config";
 import { useSelector } from "react-redux";
 import { selectCategoryById } from "../../redux/selectors/categoriesSelectors";
 import { ReactComponent as CloseIcon } from "../../pages/BasketPage/ic_close.svg";
+import ProductImage from "../ProductImage/ProductImage";
 import IconButton from "../IconButton/IconButton";
 import "./BasketProductCard.scss";
 
@@ -11,7 +12,11 @@ const BasketProductCard = ({ product, addToBasket, removeFromBasket, removeAllCo
 
     return(
         <div className="BasketProductCard">
-            <img src={API_HOST + product.image} alt={product.name} className="BasketProductCard-Image"/>
+            <ProductImage
+                src={API_HOST + product.image}
+                alt={product.name}
+                className="BasketProductCard-Image"
+            />
             <div className="BasketProductCard-Props">
                 <p className="BasketProductCard-Category">{productCategory.title}</p>
                 <p className="BasketProductCard-Name">{product.name}</p>
