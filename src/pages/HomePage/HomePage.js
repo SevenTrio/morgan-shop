@@ -14,7 +14,9 @@ const HomePage = () => {
                 <Divider className="HomePage-Divider"/>
             </Hidden>
             <Products className="HomePage-Products"/>
-            <ScrollToButton/>
+            <Hidden mdDown>
+                <ScrollToButton/>
+            </Hidden>
         </div>
     )
 }
