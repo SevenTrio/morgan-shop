@@ -15,8 +15,8 @@ body {
 }
 
 // убираем прыжки от появления/скрытия полосы прокрутки в декстопной версии
-@media screen and (min-width: $break_md){
-  html {
-    margin-right: calc(-1 * (100vw - 100%));
-  }
-}
+//@media screen and (min-width: $break_md){
+//  html {
+//    margin-right: calc(-1 * (100vw - 100%));
+//  }
+//}

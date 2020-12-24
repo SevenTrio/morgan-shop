@@ -20,7 +20,10 @@ const Products = ({ category, className = "" }) => {
     }
 
     return (
-        <div className={`Products ${className}`}>
+        <div
+            className={`Products ${className}`}
+            id="products"
+        >
             <Sorting className="Products-Sorting"/>
             <div className="Products-List">
                 {products
