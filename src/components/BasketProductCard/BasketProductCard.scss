@@ -168,8 +168,13 @@
     }
 
     &ValueText {
-      font-size: 10px;
-      line-height: 22px;
+      font-size: 14px;
+      line-height: 21px;
+
+      @media screen and (max-width: $break_sm - 1px){
+        font-size: 8px;
+        line-height: 18px;
+      }
     }
   }
 }
