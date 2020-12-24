@@ -59,7 +59,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 254px;
+    height: 272px;
     width: 272px;
     padding: 12px;
     background-color: $white;
@@ -68,7 +68,6 @@
 
   &-Products {
     overflow: auto;
-    max-height: 240px;
     width: 100%;
     margin-bottom: 16px;
   }
