@@ -27,6 +27,7 @@ const Products = ({ category, className = "" }) => {
 
     useEffect(() => {
         setProductsPresented(12);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [category, sortType]);
 
     const showMoreProducts = () => {

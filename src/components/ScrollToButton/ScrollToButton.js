@@ -10,14 +10,18 @@ import "./ScrollToButton.scss";
 
 const ScrollToButton = () => {
     const { scrollY } = useScroll();
-    const [showScrollDown, setShowScrollDown] = useState(true);
-    const [showScrollUp, setShowScrollUp] = useState(true);
-    const [showScroll, setShowScroll] = useStateWithCallback(true);
+    const [showArrowDown, setShowArrowDown] = useState(false);
+    const [showArrowUp, setShowArrowUp] = useState(false);
+    const [showScroll, setShowScroll] = useStateWithCallback(false);
 
     useEffect(() => {
-        setShowScrollDown(scrollY < document.documentElement.clientHeight / 2);
-        setShowScrollUp(scrollY > document.documentElement.clientHeight * 1.2);
-        setShowScroll(scrollY < document.documentElement.clientHeight / 2 || scrollY > document.documentElement.clientHeight * 1.2);
+        const isShowArrowDown = scrollY < document.documentElement.clientHeight / 2;
+        const isShowArrowUp = scrollY > document.documentElement.clientHeight * 1.2;
+
+        setShowArrowDown(isShowArrowDown);
+        setShowArrowUp(isShowArrowUp);
+        setShowScroll(isShowArrowDown || isShowArrowUp);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [scrollY]);
 
     const duration = 300;
@@ -59,7 +63,7 @@ const ScrollToButton = () => {
     };
 
     const handleScroll = () => {
-        showScrollDown ? handleScrollToProducts() : handleScrollToTop();
+        showArrowDown ? handleScrollToProducts() : handleScrollToTop();
     };
 
     return(
@@ -79,11 +83,11 @@ const ScrollToButton = () => {
                         }}
                     >
                         <div
-                            className={`ScrollToButton-Link ${showScrollUp ? "ScrollToButton-Link_up" : ""}`}
+                            className={`ScrollToButton-Link ${showArrowUp ? "ScrollToButton-Link_up" : ""}`}
                             onClick={handleScroll}
                         >
                             <span className="ScrollToButton-Text">Scroll</span>
-                            {showScrollUp
+                            {showArrowUp
                                 ? <img src={arrowUpImage} alt="" className="ScrollToButton-Image"/>
                                 : <img src={arrowDownImage} alt="" className="ScrollToButton-Image"/>
                             }

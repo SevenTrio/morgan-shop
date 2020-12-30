@@ -25,7 +25,7 @@ const scrollReducer = (state, action) => {
 export const useScroll = () => {
     const [scroll, dispatch] = useReducer(scrollReducer, scrollInitialState);
 
-    const listener = (/*e*/) => {
+    const listener = () => {
         const BoundingClientRect = document.body.getBoundingClientRect();
         dispatch({
             type: 'setScroll',
