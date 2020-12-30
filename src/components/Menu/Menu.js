@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import { hideMenu } from "../../redux/actions/menuActions";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
@@ -14,19 +14,15 @@ import './Menu.scss'
 const Menu = ( ) => {
     const dispatch = useDispatch();
     const open = useSelector(state => state.menu.open)
-    const targetRef = React.createRef();
-    let targetElement = null;
+    const targetRef = useRef();
 
     useEffect(() => {
-        targetElement = targetRef.current;
-        if (open) {
-            disableBodyScroll(targetElement)
-        }
+        if (open) disableBodyScroll(targetRef.current);
     }, [open]);
 
     const handleClose = () => {
         if (open) {
-            enableBodyScroll(targetElement)
+            enableBodyScroll(targetRef.current)
             dispatch(hideMenu);
         }
     }
