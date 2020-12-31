@@ -1,15 +1,33 @@
 @import "../../scss/config";
 
 .ScrollToButton {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  @media screen and (min-width: $max-width){
+    right: calc((100vw - #{$max-width})/2);
+  }
+
+  &_up {
+    position: fixed;
+
+    .ScrollToButton-Link {
+      flex-direction: column-reverse;
+
+      .ScrollToButton-Text {
+        margin-top: 8px;
+        margin-bottom: 0;
+      }
+    }
+  }
+
   &-Link {
-    position: absolute;
-    right: 0;
-    bottom: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 24px 24px;
-    transition: all 0.3s ease-out;
+    transition: transform 0.3s ease-out;
     cursor: pointer;
 
     &:hover {
@@ -18,16 +36,6 @@
 
     &:active {
       transform: none;
-    }
-
-    &_up {
-      position: fixed;
-      flex-direction: column-reverse;
-
-      .ScrollToButton-Text {
-        margin-top: 8px;
-        margin-bottom: 0;
-      }
     }
   }
 

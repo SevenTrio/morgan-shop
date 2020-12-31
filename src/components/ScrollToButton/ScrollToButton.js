@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useStateWithCallback } from "../../customHooks/useStateWithCallback";
 import { animateScroll as scroll, scroller } from 'react-scroll'
 import { useScroll } from "../../customHooks/useScroll";
@@ -13,6 +13,7 @@ const ScrollToButton = () => {
     const [showArrowDown, setShowArrowDown] = useState(false);
     const [showArrowUp, setShowArrowUp] = useState(false);
     const [showScroll, setShowScroll] = useStateWithCallback(false);
+    const nodeRef = useRef(null);
 
     useEffect(() => {
         const isShowArrowDown = scrollY < document.documentElement.clientHeight / 2;
@@ -27,7 +28,7 @@ const ScrollToButton = () => {
     const duration = 300;
 
     const defaultStyle = {
-        transition: `all ${duration}ms ease-in-out`,
+        transition: `opacity ${duration}ms ease-in-out`,
     };
 
     const transitionStyles = {
@@ -73,17 +74,19 @@ const ScrollToButton = () => {
                 timeout={duration}
                 mountOnEnter={true}
                 unmountOnExit={true}
+                nodeRef={nodeRef}
             >
                 {state => (
                     <div
-                        className="ScrollToButton"
+                        className={`ScrollToButton ${showArrowUp ? "ScrollToButton_up" : ""}`}
                         style={{
                             ...defaultStyle,
                             ...transitionStyles[state]
                         }}
+                        ref={nodeRef}
                     >
                         <div
-                            className={`ScrollToButton-Link ${showArrowUp ? "ScrollToButton-Link_up" : ""}`}
+                            className="ScrollToButton-Link"
                             onClick={handleScroll}
                         >
                             <span className="ScrollToButton-Text">Scroll</span>
