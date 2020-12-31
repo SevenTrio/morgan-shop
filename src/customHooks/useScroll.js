@@ -33,11 +33,14 @@ export const useScroll = () => {
         })
     };
 
+    const debouncedListener = debounce(listener, 100);
+
     useEffect(() => {
-        window.addEventListener('scroll', debounce(listener, 100));
+        window.addEventListener('scroll', debouncedListener);
         return () => {
-            window.removeEventListener('scroll', listener);
+            window.removeEventListener('scroll', debouncedListener);
         };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return {
