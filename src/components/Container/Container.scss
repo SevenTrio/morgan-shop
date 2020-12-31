@@ -1,7 +1,9 @@
 @import "../../scss/config";
 
-.BasketPage {
+.Container {
   display: flex;
   flex-direction: column;
   width: 100%;
+  max-width: 368px;
+  padding: 24px 0;
 }

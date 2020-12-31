@@ -8,16 +8,19 @@
   background-color: $light-gray;
 
   &-Image {
-    width: 100%;
-    height: auto;
-    margin-bottom: 16px;
+    &.ProductImage {
+      margin-bottom: 16px;
+    }
   }
 
   &-Button {
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    z-index: 10;
+    &.SwitchAddRemoveButton {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 12px;
+      z-index: 10;
+    }
   }
 
   &-Props {

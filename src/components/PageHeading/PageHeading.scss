@@ -1,0 +1,16 @@
+@import "../../scss/config";
+
+.PageHeading {
+  margin: 24px 0;
+  font-size: 18px;
+  line-height: 27px;
+  text-transform: uppercase;
+  text-align: center;
+
+  @media screen and (max-width: $break_sm - 1px){
+    margin-top: 0;
+    margin-bottom: 18px;
+    font-size: 12px;
+    line-height: 22px;
+  }
+}

@@ -1,0 +1,9 @@
+@import "../../scss/config";
+
+.CategoryPage {
+  padding: 26px 0;
+
+  @media screen and (max-width: $break_sm - 1px){
+    padding: 12px 0;
+  }
+}

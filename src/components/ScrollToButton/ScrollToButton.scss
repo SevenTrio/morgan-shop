@@ -1,0 +1,54 @@
+@import "../../scss/config";
+
+.ScrollToButton {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  @media screen and (min-width: $max-width){
+    right: calc((100vw - #{$max-width})/2);
+  }
+
+  &_up {
+    position: fixed;
+
+    .ScrollToButton-Link {
+      flex-direction: column-reverse;
+
+      .ScrollToButton-Text {
+        margin-top: 8px;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &-Link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 24px;
+    transition: transform 0.3s ease-out;
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-10px);
+    }
+
+    &:active {
+      transform: none;
+    }
+  }
+
+  &-Image {
+    height: 44px;
+    width: 44px;
+  }
+
+  &-Text {
+    margin-bottom: 8px;
+    writing-mode: vertical-rl;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+  }
+}

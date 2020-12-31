@@ -1,0 +1,27 @@
+@import "../../scss/config";
+
+
+.ProductImage {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+
+  &_loading {
+    .ProductImage-Image {
+      background: linear-gradient(45deg, lighten($dark-gray, 15%), $light-gray, lighten($dark-gray, 15%));
+      background-size: 400% 400%;
+      animation: gradient 3s linear infinite;
+    }
+  }
+
+  &-Image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    object-fit: cover;
+    pointer-events: none;
+  }
+}

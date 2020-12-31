@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { setFieldValue, validateField, clearFieldError, submitForm} from "../../redux/actions/loginFormActions";
+import Container from "../../components/Container/Container";
+import PageHeading from "../../components/PageHeading/PageHeading";
 import TextField from "../../components/TextField/TextField";
 import Button from "../../components/Button/Button";
 import Hidden from "../../components/Hidden/Hidden";
@@ -36,8 +38,8 @@ const LoginPage = () => {
     
     return(
         <div className="LoginPage">
-            <div className="LoginPage-Container">
-                <h1 className="LoginPage-Heading">Login</h1>
+            <Container className="LoginPage-Container">
+                <PageHeading className="LoginPage-PageHeading">Login</PageHeading>
                 <div className="LoginPage-Form">
                     <TextField
                         id="email"
@@ -105,7 +107,7 @@ const LoginPage = () => {
                         </Button>
                     </div>
                 </div>
-            </div>
+            </Container>
         </div>
     )
 }

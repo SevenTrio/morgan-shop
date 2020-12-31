@@ -1,5 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
+import Container from "../Container/Container";
+import PageHeading from "../PageHeading/PageHeading";
 import Button from "../Button/Button";
 import lampImage from "../../pages/BasketPage/lamp.svg";
 import "./BasketEmpty.scss";
@@ -13,16 +15,18 @@ const BasketEmpty = () => {
     
     return(
         <div className="BasketEmpty">
-            <h1 className="BasketEmpty-Heading">Basket</h1>
-            <img src={lampImage} alt="" className="BasketEmpty-Image"/>
-            <p className="BasketEmpty-Text">Your basket is empty</p>
-            <Button
-                onClick={handleGoToHome}
-                className="BasketEmpty-Button"
-                variant="secondary"
-            >
-                Start shopping
-            </Button>
+            <Container className="BasketEmpty-Container">
+                <PageHeading className="BasketEmpty-Heading">Basket</PageHeading>
+                <img src={lampImage} alt="" className="BasketEmpty-Image"/>
+                <p className="BasketEmpty-Text">Your basket is empty</p>
+                <Button
+                    onClick={handleGoToHome}
+                    className="BasketEmpty-Button"
+                    variant="secondary"
+                >
+                    Start shopping
+                </Button>
+            </Container>
         </div>
     )
 }

@@ -6,6 +6,7 @@ import { useBreakpoints } from "../../customHooks/useBreakpoints";
 import { selectBasketTotalQuantity } from "../../redux/selectors/basketSelectors";
 import { ReactComponent as BasketIcon } from './ic_shopping_card.svg';
 import { NavLink } from "react-router-dom";
+import ProductImage from "../ProductImage/ProductImage";
 import Button from "../Button/Button";
 import lampImage from "./lamp.svg"
 import './BasketAction.scss';
@@ -54,7 +55,11 @@ const BasketAction = ({ className = "", activeClassName="" }) => {
                             <div className="BasketAction-Products">
                                 {basket.products.map(product =>
                                     <div key={product.id} className="BasketAction-Product">
-                                        <img src={API_HOST + product.image} alt="" className="BasketAction-ProductImage"/>
+                                        <ProductImage
+                                            src={API_HOST + product.image}
+                                            alt={product.name}
+                                            className="BasketAction-ProductImage"
+                                        />
                                         <div className="BasketAction-ProductProps">
                                             <p className="BasketAction-ProductName">
                                                 {product.name}

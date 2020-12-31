@@ -1,13 +1,19 @@
 import React from 'react';
 import './SwitchAddRemoveButton.scss';
 
-const SwitchAddRemoveButton = ({ isRemove, className = "", ...props }) => {
+const SwitchAddRemoveButton = ({ isRemove, className, ...props }) => {
+    let classes = "SwitchAddRemoveButton";
+    if (className) classes += " " + className;
+    if (isRemove) classes += " SwitchAddRemoveButton_type_remove";
+
     return (
-        <button className={`SwitchAddRemoveButton ${isRemove && "SwitchAddRemoveButton_type_remove"} ${className}`} {...props}>
-            <span className="SwitchAddRemoveButton-Text">
-                { isRemove ? "-" : "+" }
-            </span>
-        </button>
+        <div className={classes} {...props}>
+            <button className="SwitchAddRemoveButton-Button">
+                <span className="SwitchAddRemoveButton-Text">
+                    { isRemove ? "-" : "+" }
+                </span>
+            </button>
+        </div>
     )
 }
 

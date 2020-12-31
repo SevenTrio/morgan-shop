@@ -59,7 +59,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 254px;
+    height: 272px;
     width: 272px;
     padding: 12px;
     background-color: $white;
@@ -67,6 +67,7 @@
   }
 
   &-Products {
+    overflow: auto;
     width: 100%;
     margin-bottom: 16px;
   }
@@ -80,8 +81,12 @@
     }
 
     &Image {
-      height: 76px;
-      width: 68px;
+      &.ProductImage {
+        flex-shrink: 0;
+        padding-top: 0;
+        height: 76px;
+        width: 68px;
+      }
     }
 
     &Props {

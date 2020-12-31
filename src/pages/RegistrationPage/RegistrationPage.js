@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { setFieldValue, validateField, clearFieldError, submitForm} from "../../redux/actions/registrationFormActions";
+import Container from "../../components/Container/Container";
+import PageHeading from "../../components/PageHeading/PageHeading";
 import TextField from "../../components/TextField/TextField";
 import Button from "../../components/Button/Button";
 import Hidden from "../../components/Hidden/Hidden";
@@ -37,8 +39,8 @@ const RegistrationPage = () => {
 
     return(
         <div className="RegistrationPage">
-            <div className="RegistrationPage-Container">
-                <h1 className="RegistrationPage-Heading">Create account</h1>
+            <Container className="RegistrationPage-Container">
+                <PageHeading className="RegistrationPage-PageHeading">Create account</PageHeading>
                 <div className="RegistrationPage-Form">
                     <TextField
                         id="fullName"
@@ -129,7 +131,7 @@ const RegistrationPage = () => {
                         </Button>
                     </div>
                 </div>
-            </div>
+            </Container>
         </div>
     )
 }
