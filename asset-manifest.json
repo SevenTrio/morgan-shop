@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/morgan-shop/static/css/main.6248b86c.chunk.css",
-    "main.js": "/morgan-shop/static/js/main.062e26d7.chunk.js",
-    "main.js.map": "/morgan-shop/static/js/main.062e26d7.chunk.js.map",
+    "main.css": "/morgan-shop/static/css/main.da2881aa.chunk.css",
+    "main.js": "/morgan-shop/static/js/main.9e8b75f1.chunk.js",
+    "main.js.map": "/morgan-shop/static/js/main.9e8b75f1.chunk.js.map",
     "runtime-main.js": "/morgan-shop/static/js/runtime-main.8643331c.js",
     "runtime-main.js.map": "/morgan-shop/static/js/runtime-main.8643331c.js.map",
-    "static/js/2.c879d63e.chunk.js": "/morgan-shop/static/js/2.c879d63e.chunk.js",
-    "static/js/2.c879d63e.chunk.js.map": "/morgan-shop/static/js/2.c879d63e.chunk.js.map",
+    "static/js/2.2cd9b98c.chunk.js": "/morgan-shop/static/js/2.2cd9b98c.chunk.js",
+    "static/js/2.2cd9b98c.chunk.js.map": "/morgan-shop/static/js/2.2cd9b98c.chunk.js.map",
     "index.html": "/morgan-shop/index.html",
-    "static/css/main.6248b86c.chunk.css.map": "/morgan-shop/static/css/main.6248b86c.chunk.css.map",
-    "static/js/2.c879d63e.chunk.js.LICENSE.txt": "/morgan-shop/static/js/2.c879d63e.chunk.js.LICENSE.txt",
+    "static/css/main.da2881aa.chunk.css.map": "/morgan-shop/static/css/main.da2881aa.chunk.css.map",
+    "static/js/2.2cd9b98c.chunk.js.LICENSE.txt": "/morgan-shop/static/js/2.2cd9b98c.chunk.js.LICENSE.txt",
     "static/media/0_char.9b6a592d.svg": "/morgan-shop/static/media/0_char.9b6a592d.svg",
     "static/media/glowing_lamp.ca5f0e52.svg": "/morgan-shop/static/media/glowing_lamp.ca5f0e52.svg",
     "static/media/ic_arrow_down.8172ad65.svg": "/morgan-shop/static/media/ic_arrow_down.8172ad65.svg",
@@ -19,6 +19,8 @@
     "static/media/ic_eye_on.4917d9c8.svg": "/morgan-shop/static/media/ic_eye_on.4917d9c8.svg",
     "static/media/ic_facebook.3675488b.svg": "/morgan-shop/static/media/ic_facebook.3675488b.svg",
     "static/media/ic_google.8e08f69a.svg": "/morgan-shop/static/media/ic_google.8e08f69a.svg",
+    "static/media/ic_long_arrow_down.f5fe9a26.svg": "/morgan-shop/static/media/ic_long_arrow_down.f5fe9a26.svg",
+    "static/media/ic_long_arrow_up.5f27f71e.svg": "/morgan-shop/static/media/ic_long_arrow_up.5f27f71e.svg",
     "static/media/ic_menu.e1bd0499.svg": "/morgan-shop/static/media/ic_menu.e1bd0499.svg",
     "static/media/ic_search.3df4b208.svg": "/morgan-shop/static/media/ic_search.3df4b208.svg",
     "static/media/ic_shopping_card.1ea131fd.svg": "/morgan-shop/static/media/ic_shopping_card.1ea131fd.svg",
@@ -28,8 +30,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.8643331c.js",
-    "static/js/2.c879d63e.chunk.js",
-    "static/css/main.6248b86c.chunk.css",
-    "static/js/main.062e26d7.chunk.js"
+    "static/js/2.2cd9b98c.chunk.js",
+    "static/css/main.da2881aa.chunk.css",
+    "static/js/main.9e8b75f1.chunk.js"
   ]
 }
