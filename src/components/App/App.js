@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+import { MemoryRouter as Router } from "react-router-dom";
 import { useFetchShopData } from "../../customHooks/useFetchShopData";
 import Header from "../Header/Header";
 import Menu from "../Menu/Menu";
