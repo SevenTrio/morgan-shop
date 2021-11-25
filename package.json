@@ -3,13 +3,18 @@
   "version": "0.1.0",
   "private": false,
   "homepage": "https://seventrio.github.io/morgan-shop/",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": "12.x",
+    "npm": "6.x"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "body-scroll-lock": "^3.1.5",
     "lodash.debounce": "^4.0.8",
-    "node-sass": "^6.0.1",
+    "node-sass": "4.14.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-portal": "^4.2.1",
